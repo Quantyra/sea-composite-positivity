@@ -1,0 +1,34 @@
+{
+  "checked_utc": "2026-11-16T22:18:17.883146+00:00",
+  "paper": "P012",
+  "repository": "https://github.com/Quantyra/sea-composite-positivity",
+  "status": "REVIEW_GATE_PASSED_RELEASE_PREPARED",
+  "version": "1.0.0",
+  "tag": "v1.0.0",
+  "authority": "Dan: If they both have passed 3 lens review then publish them.",
+  "zenodo_enabled": "Confirmed by Dan",
+  "reviewed_commit": "d8fec6c4ddf315cccdfdf8565b4c4d55388bf064",
+  "manuscript_sha256": "8176c99fff1fdb723493452a36eef09f25144987dddebbc1f3b81978572c6ee5",
+  "pdf_sha256": "bec715d8e8c1ac8778c1feb8d19172e72aafd2f4ffa57a46be693ab5868b2c50",
+  "review_summary_sha256": "0b13c2d08867965afeeadd84eea96b37ad735f75939cdf2dceabf398ebf6fd5d",
+  "review_status": "COMPLETE_WITH_DISPOSITIONS",
+  "unresolved_essential_findings": [],
+  "providers": [
+    "claude",
+    "grok",
+    "agy"
+  ],
+  "manuscript_and_pdf_changed": false,
+  "checks": "Existing package verification, exact review/packet/report bindings and prior manifest hashes pass; no mathematical experiment or model review rerun.",
+  "human_peer_review": false,
+  "formal_certification": false,
+  "new_proof_jobs": false,
+  "scope": "Preprint publication only; existing PaperMill certification custody and queue unchanged.",
+  "source_recheck": {
+    "url": "https://mdpi-res.com/d_attachment/entropy/entropy-27-01018/article_deploy/entropy-27-01018.pdf",
+    "sha256": "b120925da27bc6037527576aff66c7809216183fe53823dc9433ba808078c97c",
+    "bytes": 7406633,
+    "matches_audited_publisher_pdf": true,
+    "version_notes": "Browser checked 2026-11-16: PDF version of record 2025-09-28; latest listed HTML update 2026-09-01; arXiv latest v5 2025-09-29. Not exhaustive novelty clearance."
+  }
+}

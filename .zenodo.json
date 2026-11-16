@@ -2,8 +2,21 @@
   "title": "A boundary positivity obstruction for a composite steepest-entropy-ascent equation",
   "upload_type": "publication",
   "publication_type": "preprint",
-  "description": "Preparation-stage manuscript: an explicit boundary positivity obstruction for the stated composite SEA equation, with sharp instantaneous repair bounds and a distinct full-rank limit. No formal certification, general SEA impossibility or physical nonlinear-computing result is claimed.",
-  "creators": [{"name": "Fredriksen, Daniel", "affiliation": "Quantyra Inc.", "orcid": "0009-0002-9123-7435"}],
+  "description": "Preprint: an explicit boundary positivity obstruction for the stated composite SEA equation, with sharp instantaneous repair bounds and a distinct full-rank limit. No formal certification, general SEA impossibility or physical nonlinear-computing result is claimed. Separate Claude, Grok and AGY AI reviews are complete with dispositions; this is not human peer review or Lean certification.",
+  "creators": [
+    {
+      "name": "Fredriksen, Daniel",
+      "affiliation": "Quantyra Inc.",
+      "orcid": "0009-0002-9123-7435"
+    }
+  ],
   "license": "CC-BY-4.0",
-  "keywords": ["steepest entropy ascent", "quantum thermodynamics", "positivity", "nonlinear quantum dynamics"]
+  "keywords": [
+    "steepest entropy ascent",
+    "quantum thermodynamics",
+    "positivity",
+    "nonlinear quantum dynamics"
+  ],
+  "version": "1.0.0",
+  "publication_date": "2026-11-16"
 }

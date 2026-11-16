@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Unpublished manuscript candidate; no DOI has been assigned. Cite only with its preparation-stage status and commit."
+type: article
+title: "A boundary positivity obstruction for a composite steepest-entropy-ascent equation"
+authors:
+  - family-names: Fredriksen
+    given-names: Daniel
+    affiliation: Quantyra Inc.
+    orcid: "https://orcid.org/0009-0002-9123-7435"
+version: 0.1.0
+license: CC-BY-4.0
+repository-code: "https://github.com/Quantyra/sea-composite-positivity"
+keywords:
+  - steepest entropy ascent
+  - quantum thermodynamics
+  - positivity
+  - nonlinear quantum dynamics

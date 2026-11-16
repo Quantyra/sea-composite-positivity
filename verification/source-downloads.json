@@ -1,0 +1,29 @@
+[
+  {
+    "file": "sources/ray-beretta-publisher.pdf",
+    "url": "https://mdpi-res.com/d_attachment/entropy/entropy-27-01018/article_deploy/entropy-27-01018.pdf",
+    "retrieved_utc": "2026-11-16T20:22:29.802756+00:00",
+    "final_url": "https://mdpi-res.com/d_attachment/entropy/entropy-27-01018/article_deploy/entropy-27-01018.pdf",
+    "http_status": 200,
+    "status": "retrieved",
+    "bytes": 7406633,
+    "sha256": "b120925da27bc6037527576aff66c7809216183fe53823dc9433ba808078c97c"
+  },
+  {
+    "file": "sources/publisher-version-notes.html",
+    "url": "https://www.mdpi.com/1099-4300/27/10/1018/notes",
+    "retrieved_utc": "2026-11-16T20:22:29.813023+00:00",
+    "status": "failed",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "sources/ray-beretta-v5.html",
+    "url": "https://arxiv.org/html/2301.11548v5",
+    "retrieved_utc": "2026-11-16T20:22:29.816682+00:00",
+    "final_url": "https://arxiv.org/html/2301.11548v5",
+    "http_status": 200,
+    "status": "retrieved",
+    "bytes": 619976,
+    "sha256": "3b544751e7c79e559f2d5d641cc6bc0fdad21630faa307bc4d63be8aa74e29a0"
+  }
+]

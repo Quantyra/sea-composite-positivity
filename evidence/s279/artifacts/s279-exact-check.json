@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "assertions": 244,
+  "elapsedSeconds": 0.1329645,
+  "scope": "Exact finite arithmetic only; not external or formal review, physical realization, or trajectory integration",
+  "source": "arXiv:2301.11548v5 equations 14-20,39,59-62",
+  "fixtures": [
+    {
+      "tauA": 1,
+      "tauB": 1,
+      "kernelCoefficientOfLog3": "-16/81"
+    },
+    {
+      "tauA": 1,
+      "tauB": 2,
+      "kernelCoefficientOfLog3": "-4/27"
+    },
+    {
+      "tauA": 2,
+      "tauB": 1,
+      "kernelCoefficientOfLog3": "-4/27"
+    },
+    {
+      "tauA": 2,
+      "tauB": 3,
+      "kernelCoefficientOfLog3": "-20/243"
+    }
+  ],
+  "productControl": "PASS",
+  "pureStateControl": "PASS"
+}

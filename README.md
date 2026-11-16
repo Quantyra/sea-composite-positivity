@@ -1,0 +1,42 @@
+# Boundary positivity in composite steepest-entropy-ascent dynamics
+
+Preparation-stage manuscript by Daniel Fredriksen, Quantyra Inc. Candidate 0.1.0, 2026-11-16. **Unpublished; no DOI, independent peer review or Lean certification is claimed.**
+
+The paper gives a rank-three, two-qubit counterexample to positivity of the pointwise composite equation in Ray and Beretta, *Entropy* 27, 1018 (2025), under its stated kernel-logarithm convention, uniform metric and normalization/mean-energy constraints. For arbitrary finite positive local relaxation times, the initially zero joint population has derivative
+
+\[
+-\frac{8\log 3}{81}(\tau_A^{-1}+\tau_B^{-1})<0.
+\]
+
+The marginals are full rank and both energy covariance denominators are one. The paper also proves a connected-correlation identity, sharp instantaneous repair bounds, and an explicit inward full-rank limit. These distinguish a pointwise boundary failure from other SEA equations or boundary completions. No physical nonlinear-computing, signaling, general simulation or complexity-class result follows.
+
+## Read the package
+
+- [Manuscript PDF](manuscript/main.pdf) and [LaTeX](manuscript/main.tex).
+- [Claims and assumptions](CLAIMS.md), [primary-source correspondence and novelty limits](SOURCES.md).
+- [Internal review and dispositions](reviews/INTERNAL-REVIEW.md): same-agent mathematical/source/adversarial review, not independent provider review.
+- [Full-manuscript Lean certification plan](formal/CERTIFICATION-PLAN.md): planned modules and gates; no accepted declarations.
+- [Exact-check receipt](verification/exact-check.json), [process receipt](verification/exact-process.json), [build receipt](verification/build.json).
+- [Original S279 evidence](evidence/s279/proofs/e004-s279-sea-composite-audit-2026-11-15.md), imported byte-for-byte with [provenance](evidence/provenance.json). Its missing child exit code remains disclosed; the new Python check is separate evidence.
+
+## Reproduce
+
+Python 3.13.7 and Tectonic 0.17.0 were used; rendering uses PyMuPDF 1.28.2. The arithmetic check uses only the Python standard library. From the repository root:
+
+```text
+python -B tools/run_exact.py
+python -B tools/build.py --tectonic /path/to/tectonic --render
+python -B tools/verify_package.py
+```
+
+The first command runs a fixed <=4-by-4 rational diagnostic with a 60-second child-process cap. It checks substitutions, four time pairs and two controls; it is not the proof of the analytic statements. Running it again replaces its current receipts, so preserve the frozen commit when reproducing. Tectonic's initial bundle download may require Internet access. Build/render artifacts go under ignored `.build/`; the checked PDF is tracked.
+
+Primary full-source snapshots are not redistributed in this repository. `tools/fetch_sources.py` retrieves the published PDF and arXiv HTML and records each response; a version-notes download returned HTTP 403 although browser inspection succeeded. See [source instructions](sources/README.md) and recorded hashes. `tools/import_evidence.py` is a provenance-import utility requiring the original technical checkout, not a requirement for reproducing the manuscript.
+
+## Custody and next gates
+
+Scientific custody: Quantyra Quantum S279/S289. Manuscript and certification planning: PaperMill P012/S025. This dedicated satellite holds the technical artifacts. The private repository prepares a reviewable candidate; it does not trigger a release or a proof job. Existing jobs, ownership, parked research and queue priorities remain intact.
+
+Remaining work: independent source/domain and mathematical review, submission metadata and publication decision; PaperMill C1 dependency/type audit, then full C2-C4 formalization and R1-R4 reconciliation when admitted. No claim of a novel first counterexample or globally repaired dynamics is made.
+
+Manuscript and original project documentation: CC BY 4.0. New utility code: MIT. Imported evidence retains its original provenance; primary publications retain their own licenses. See [LICENSE](LICENSE).

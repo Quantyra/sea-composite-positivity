@@ -1,0 +1,61 @@
+{
+  "source_repository": "https://github.com/Quantyra/quantyra-quantum-complexity",
+  "source_commit": "7b50583bb96679d6213c6e47b25f234d3ad30fb2",
+  "files": [
+    {
+      "original_path": "proofs/e004-s279-sea-composite-audit-2026-11-15.md",
+      "file": "evidence/s279/proofs/e004-s279-sea-composite-audit-2026-11-15.md",
+      "bytes": 14552,
+      "sha256": "9899796204999c1eb22e81496bbd052c4e39066324b74862cd9de77de09cef3c"
+    },
+    {
+      "original_path": "scripts/s279_check_sea_generator.cjs",
+      "file": "evidence/s279/scripts/s279_check_sea_generator.cjs",
+      "bytes": 5647,
+      "sha256": "5e0ce8f17ad85ea3f2c42a84e367479c62d7ceb20c3fc638993ff0f77756415c"
+    },
+    {
+      "original_path": "artifacts/s279-source-receipt.json",
+      "file": "evidence/s279/artifacts/s279-source-receipt.json",
+      "bytes": 1046,
+      "sha256": "5a18b7e29519952e34b6275c317701d966dd083881176070658e286504ca2b74"
+    },
+    {
+      "original_path": "artifacts/s279-process-receipt.json",
+      "file": "evidence/s279/artifacts/s279-process-receipt.json",
+      "bytes": 110,
+      "sha256": "d0efd585974950cc04698e1725f65dfd1e37ab9364f9c020d968990928f11ae9"
+    },
+    {
+      "original_path": "artifacts/s279-preregistration.md",
+      "file": "evidence/s279/artifacts/s279-preregistration.md",
+      "bytes": 1351,
+      "sha256": "6fb7ed1ea7e02b2b616b3375fcf79d262510de0bdee3162f6f9fc123a6d9a2ee"
+    },
+    {
+      "original_path": "artifacts/s279-exact-check.json",
+      "file": "evidence/s279/artifacts/s279-exact-check.json",
+      "bytes": 690,
+      "sha256": "cbc3ec63f6ab1f3faaa2d5866ce3cab0e2a03010437693e74be280212b968fa7"
+    },
+    {
+      "original_path": "artifacts/s279-check.stdout.txt",
+      "file": "evidence/s279/artifacts/s279-check.stdout.txt",
+      "bytes": 518,
+      "sha256": "1e5e104be28eec9c6f697f0e294bbe949fc44bee5ecf7b29947235e831cf22fc"
+    },
+    {
+      "original_path": "artifacts/s279-check.stderr.txt",
+      "file": "evidence/s279/artifacts/s279-check.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original_path": "artifacts/s279-sources/ray-beretta-2301.11548v5.pdf",
+      "file": "sources/ray-beretta-v5.pdf",
+      "bytes": 7484523,
+      "sha256": "17a84abd01bdeb886c15a6764934cb071a6db8b48758cbce6cbd1c3094382e57",
+      "tracked": false
+    }
+  ]
+}

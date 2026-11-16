@@ -1,0 +1,205 @@
+{
+  "created_utc": "2026-11-16T20:39:10.473684+00:00",
+  "scope": "Package inventory and verification, not publication or formal acceptance",
+  "verification": {
+    "status": "pass",
+    "source_sha256": "2e9223c62b1601bbb18b11f1d86a8dcc7362fe91b09e6f68e688d1550cbc9b70",
+    "pdf_sha256": "dad2b64d5e6a329c18ca6eda33641e329546616c9d60b8649ed90c50c1bdf572",
+    "pages": 5,
+    "preserved_evidence_files_checked": 9,
+    "diagnostic_assertions": 122,
+    "formal_certification": false,
+    "scope": "package, hashes, receipts and links; not an additional mathematical experiment"
+  },
+  "review": "same-agent internal review only",
+  "visual_pages_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "manifest_excludes_itself": true,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 83,
+      "sha256": "97c7e4fec2ee0278f1db2c1070de9efbb02756f17c642b2f632390471745632c"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 126,
+      "sha256": "29733cc95d83776c15e3fd7f2032d526ccd6b73a4a303d59ffb0a5c64c8ae4f3"
+    },
+    {
+      "path": ".zenodo.json",
+      "bytes": 723,
+      "sha256": "c2e4b574ca1265a72b3d8ffd45d17ca8125ad876105ecb8beef0fd7b3b15529b"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 971,
+      "sha256": "6619404004bf5f193a06ef4c3ac9fc4b81cf0e34e48901539d98db8d95807fd0"
+    },
+    {
+      "path": "CITATION.cff",
+      "bytes": 613,
+      "sha256": "0e095af7bcfb7d6cd36781623e291273e1a59509f9212591e07939a97d894a01"
+    },
+    {
+      "path": "CLAIMS.md",
+      "bytes": 4205,
+      "sha256": "c0db972108a93ffeb1c61da4bc648156decd843a33f7b176503ee821cad71bf0"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1686,
+      "sha256": "1a7219098e35f3f2d84dfb7637c5ecb280cb3d3668eda1deb81569121e060293"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4050,
+      "sha256": "234aea4c58171dda679eaceb6198b98c665db97c000a3cde9270b661dfdba896"
+    },
+    {
+      "path": "SOURCES.md",
+      "bytes": 5843,
+      "sha256": "f78e753ec590e989423fa5eeaf84ec9d979c7c77aecc99f572818275977b91ec"
+    },
+    {
+      "path": "evidence/provenance.json",
+      "bytes": 2457,
+      "sha256": "c68333a4324b4c38dd6cacebf8eb05485d565be159ebbdc8341e5c573b3cbee0"
+    },
+    {
+      "path": "evidence/s279/artifacts/s279-check.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/s279/artifacts/s279-check.stdout.txt",
+      "bytes": 518,
+      "sha256": "1e5e104be28eec9c6f697f0e294bbe949fc44bee5ecf7b29947235e831cf22fc"
+    },
+    {
+      "path": "evidence/s279/artifacts/s279-exact-check.json",
+      "bytes": 690,
+      "sha256": "cbc3ec63f6ab1f3faaa2d5866ce3cab0e2a03010437693e74be280212b968fa7"
+    },
+    {
+      "path": "evidence/s279/artifacts/s279-preregistration.md",
+      "bytes": 1351,
+      "sha256": "6fb7ed1ea7e02b2b616b3375fcf79d262510de0bdee3162f6f9fc123a6d9a2ee"
+    },
+    {
+      "path": "evidence/s279/artifacts/s279-process-receipt.json",
+      "bytes": 110,
+      "sha256": "d0efd585974950cc04698e1725f65dfd1e37ab9364f9c020d968990928f11ae9"
+    },
+    {
+      "path": "evidence/s279/artifacts/s279-source-receipt.json",
+      "bytes": 1046,
+      "sha256": "5a18b7e29519952e34b6275c317701d966dd083881176070658e286504ca2b74"
+    },
+    {
+      "path": "evidence/s279/proofs/e004-s279-sea-composite-audit-2026-11-15.md",
+      "bytes": 14552,
+      "sha256": "9899796204999c1eb22e81496bbd052c4e39066324b74862cd9de77de09cef3c"
+    },
+    {
+      "path": "evidence/s279/scripts/s279_check_sea_generator.cjs",
+      "bytes": 5647,
+      "sha256": "5e0ce8f17ad85ea3f2c42a84e367479c62d7ceb20c3fc638993ff0f77756415c"
+    },
+    {
+      "path": "formal/CERTIFICATION-PLAN.md",
+      "bytes": 11179,
+      "sha256": "ab92476d23fe95103082d83864ef569203d2ff66efdcba5c4409dc523f2f3013"
+    },
+    {
+      "path": "manuscript/main.pdf",
+      "bytes": 70322,
+      "sha256": "dad2b64d5e6a329c18ca6eda33641e329546616c9d60b8649ed90c50c1bdf572"
+    },
+    {
+      "path": "manuscript/main.tex",
+      "bytes": 15118,
+      "sha256": "2e9223c62b1601bbb18b11f1d86a8dcc7362fe91b09e6f68e688d1550cbc9b70"
+    },
+    {
+      "path": "reviews/INTERNAL-REVIEW.md",
+      "bytes": 4068,
+      "sha256": "2bfc1dae0c70e4078b452259a8047ebb4567d544658a2d4359c5b520cff0047c"
+    },
+    {
+      "path": "sources/README.md",
+      "bytes": 1073,
+      "sha256": "95f5b45749cdc36d6c59549e009f8f2dde09c9a790394782bb69bf1cffe73f17"
+    },
+    {
+      "path": "tools/build.py",
+      "bytes": 2509,
+      "sha256": "ce2ca5a1126f0061c2a6b3f8451ec9674c1132dd7baaf6cb4dbd5f8acf496272"
+    },
+    {
+      "path": "tools/check_exact.py",
+      "bytes": 3982,
+      "sha256": "7c9194ede10e9d372dfada0c564b623075dd2a1a4a862cb256f76b5af80f6d72"
+    },
+    {
+      "path": "tools/fetch_sources.py",
+      "bytes": 1533,
+      "sha256": "3c40555a04a5260e41d22d12f32266add38b23aac177d75f33cadae904e97c88"
+    },
+    {
+      "path": "tools/freeze_package.py",
+      "bytes": 1213,
+      "sha256": "178de70b33239bcfc726e3457073ca9216fa5cf8c9f224135ecc24550ed30b70"
+    },
+    {
+      "path": "tools/import_evidence.py",
+      "bytes": 1548,
+      "sha256": "e918d77eeb4f92c3746aad869f27c9fac946db867d5b81a0786947f6cf81fa8a"
+    },
+    {
+      "path": "tools/inspect_sources.py",
+      "bytes": 963,
+      "sha256": "11129f395cd316e5936a6f61605380c81606c08efd36314fdb984c2fe2e964ee"
+    },
+    {
+      "path": "tools/run_exact.py",
+      "bytes": 905,
+      "sha256": "41608095d23b802eca1a969853ba50af89fc09eff5ba5fe9ce7013d931e931c5"
+    },
+    {
+      "path": "tools/verify_package.py",
+      "bytes": 2662,
+      "sha256": "bb54d528d1d1de806d8d1672c424894fa4a95592e467c53af2208232c37007a6"
+    },
+    {
+      "path": "verification/build.json",
+      "bytes": 601,
+      "sha256": "a27dfa69a2325ba90e5515543251b02d348afb358cae62a6a2cfd88d094af152"
+    },
+    {
+      "path": "verification/exact-check.json",
+      "bytes": 792,
+      "sha256": "82fa1daf074925b8b850f375a7b40279accbfa2cec31c9a26802060c073b887c"
+    },
+    {
+      "path": "verification/exact-process.json",
+      "bytes": 926,
+      "sha256": "1fe7197e7753c5b9cc330e34474acf5d0a7e07fc62d9ca9f5cc2f0eab7e2a18b"
+    },
+    {
+      "path": "verification/source-downloads.json",
+      "bytes": 1138,
+      "sha256": "7ea6bc866a8e8c71cf071d0ae3bb39cc1ba1e8bf727eb3946f8cb4d6db98d678"
+    },
+    {
+      "path": "verification/source-pages.json",
+      "bytes": 2498,
+      "sha256": "655ff0156a946bb231277a3efebc01a1e5bdcb2b958a9f8f208d8ca54407eb45"
+    }
+  ]
+}

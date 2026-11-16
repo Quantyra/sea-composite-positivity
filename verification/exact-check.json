@@ -1,0 +1,31 @@
+{
+  "status": "pass",
+  "scope": "exact finite rational substitutions, not asymptotic proof or formal certification",
+  "assertions": 122,
+  "maximum_matrix_dimension": 4,
+  "time_pairs": [
+    {
+      "tau_A": 1,
+      "tau_B": 1,
+      "minus_kernel_over_ln3": "16/81"
+    },
+    {
+      "tau_A": 1,
+      "tau_B": 2,
+      "minus_kernel_over_ln3": "4/27"
+    },
+    {
+      "tau_A": 2,
+      "tau_B": 1,
+      "minus_kernel_over_ln3": "4/27"
+    },
+    {
+      "tau_A": 2,
+      "tau_B": 3,
+      "minus_kernel_over_ln3": "20/243"
+    }
+  ],
+  "logarithm": "formal positive factor ln(3); sign and limits proved in manuscript",
+  "elapsed_seconds": 0.035739999962970614,
+  "script_sha256": "7c9194ede10e9d372dfada0c564b623075dd2a1a4a862cb256f76b5af80f6d72"
+}

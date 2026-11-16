@@ -1,0 +1,20 @@
+{
+  "checkedDate": "2026-11-15",
+  "authors": ["Rohit Kishan Ray", "Gian Paolo Beretta"],
+  "arxiv": "2301.11548v5",
+  "versionDate": "2025-09-29",
+  "publicationDate": "2025-09-28",
+  "doi": "10.3390/e27101018",
+  "pdfUrl": "https://arxiv.org/pdf/2301.11548v5",
+  "htmlUrl": "https://arxiv.org/html/2301.11548v5",
+  "localPdf": "artifacts/s279-sources/ray-beretta-2301.11548v5.pdf",
+  "sha256": "17a84abd01bdeb886c15a6764934cb071a6db8b48758cbce6cbd1c3094382e57",
+  "license": "CC BY 4.0, explicitly stated on PDF page 1",
+  "inspected": "Equations 14-20,39,59-62 and Section 11; composite equation and multiplier signs matched in HTML and PDF text (PDF pages 12 and 15).",
+  "limitations": [
+    "A web screenshot request timed out; no successful visual PDF rendering is claimed.",
+    "Publisher version-notes endpoint returned HTTP 429.",
+    "ArXiv abstract lists v5 as latest; no exhaustive errata or novelty clearance.",
+    "Targeted searches inspected no corrective replacement; absence of a search hit is not evidence of novelty."
+  ]
+}

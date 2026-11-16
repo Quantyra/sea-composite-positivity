@@ -1,0 +1,9 @@
+.build/
+__pycache__/
+*.pyc
+manuscript/*.aux
+manuscript/*.log
+manuscript/*.out
+sources/*.html
+sources/*.pdf
+!sources/README.md

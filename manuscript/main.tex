@@ -1,0 +1,191 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\tr}{\operatorname{Tr}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\bln}{\operatorname{Bln}}
+\newcommand{\ac}[2]{\{#1,#2\}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\title{A boundary positivity obstruction for a composite\newline steepest-entropy-ascent equation}
+\author{Daniel Fredriksen\\Quantyra Inc.\\
+\small\href{https://orcid.org/0009-0002-9123-7435}{ORCID: 0009-0002-9123-7435}}
+\date{November 16, 2026\\\small Manuscript candidate 0.1.0; not formally certified}
+\begin{document}
+\maketitle
+\begin{abstract}
+We examine the pointwise composite steepest-entropy-ascent equation stated by Ray and Beretta, with a uniform metric, normalization and mean-energy constraints, and their prescribed value of the logarithm on the kernel. A separable rank-three state of two qubits, with full-rank marginals and nonzero energy covariance denominators, has a strictly negative instantaneous population derivative in its kernel. Consequently, the specified vector field cannot generate a right-differentiable positive-state trajectory from every density operator in that domain. The calculation holds for arbitrary finite positive local relaxation times. We identify the preserved connected-correlation operator behind the obstruction, derive sharp instantaneous trace-norm bounds on repairs, and compute the distinct full-rank boundary limit. The conclusion concerns the displayed pointwise prescription; it does not exclude full-rank restricted dynamics, alternative boundary completions, or other steepest-entropy-ascent models.
+\end{abstract}
+
+\section{The equation and the claim being tested}
+Positive semidefiniteness of the joint density operator is a necessary condition for any proposed quantum-state evolution. Positivity of each marginal alone does not imply this joint condition. Ray and Beretta~\cite{RayBeretta} formulate a composite steepest-entropy-ascent (SEA) dynamics using locally perceived global observables. Their Section~10 specializes the equation to a uniform metric with normalization and mean energy as the conserved quantities. We test that specific equation at a state with a nontrivial kernel.
+
+All operators below act on finite-dimensional Hilbert spaces, and $\hbar=k_B=1$. Let $\rho$ be a joint density operator on $A\otimes B$, with marginals $a=\tr_B\rho$ and $b=\tr_A\rho$. For a Hermitian global operator $F$, define
+\begin{align}
+ F^A&=\tr_B[(I\otimes b)F], &F^B&=\tr_A[(a\otimes I)F],\label{eq:perception}\\
+ \Delta F^J&=F^J-I\tr(\rho_JF^J), &
+ (F,G)^J&=\tfrac12\tr\bigl(\rho_J\ac{\Delta F^J}{\Delta G^J}\bigr).
+\end{align}
+The superscripts suppress the dependence on $\rho$. The entropy operator is
+\begin{equation}
+ S(\rho)=-\bln(\rho),\qquad
+ \bln(x)=\begin{cases}\ln x,&0<x\leq1,\\0,&x=0,\end{cases}\label{eq:blog}
+\end{equation}
+with spectral functional calculus. This is the boundary convention in equations~(18)--(20) of Ref.~\cite{RayBeretta}, not a limit from positive eigenvalues.
+
+For positive finite $\tau_A,\tau_B$ and nonzero denominators, write
+\begin{equation}
+ \beta_J=\frac{(H,S)^J}{(H,H)^J},\quad
+ D_J=-\frac{2}{\tau_J}(\Delta S^J-\beta_J\Delta H^J),\quad
+ G_J=-\ac{D_J}{\rho_J}.\label{eq:dissipator}
+\end{equation}
+The joint vector field under examination is
+\begin{equation}
+ \mathcal F(\rho)=-i[H,\rho]+G_A\otimes b+a\otimes G_B.\label{eq:joint}
+\end{equation}
+Equation~\eqref{eq:joint} is equation~(39) of Ref.~\cite{RayBeretta}, with its local dissipators specialized using equations~(59)--(62). In particular, its dissipative terms contain products with the complementary \emph{marginal}; they are not anticommutators of embedded local operators with the joint $\rho$. Replacing them by the latter expression would define a different equation.
+
+We consider $\rho$ as a density operator in the source's homogeneous-state domain, not as an epistemic ensemble evolved component by component. The source explicitly defines~\eqref{eq:blog} at zero, treats pure states, and describes nonnegativity of the overall density operator after equation~(62). The claim tested here is therefore the existence, from the witness below, of a right-differentiable positive trajectory satisfying the displayed vector field at its initial time. An initial-value law restricted to strictly positive density matrices is a narrower claim.
+
+\section{An explicit boundary witness}
+We first state the elementary necessary tangent condition used in the test. No existence theorem for the differential equation is assumed.
+
+\begin{lemma}[Kernel tangent condition]\label{lem:tangent}
+Let $\rho(t)$, $0\leq t<\epsilon$, be a positive semidefinite matrix-valued curve, right differentiable at zero. If $v$ lies in the kernel of $\rho(0)$, then
+\begin{equation}
+ \langle v,\dot\rho(0)v\rangle\geq0.\label{eq:tangent}
+\end{equation}
+\end{lemma}
+\begin{proof}
+The scalar function $f(t)=\langle v,\rho(t)v\rangle$ satisfies $f(0)=0$ and $f(t)\geq0$ for $t\geq0$. Its right derivative is the limit of the nonnegative quotients $f(t)/t$.
+\end{proof}
+
+Let $X=\begin{psmallmatrix}0&1\\1&0\end{psmallmatrix}$, and order the product basis as $00,01,10,11$.
+\begin{theorem}[Failure of the pointwise positive-flow condition]\label{thm:witness}
+Take
+\begin{equation}
+ \rho_*=\frac13\diag(1,1,1,0),\qquad H=X\otimes I+I\otimes X.\label{eq:witness}
+\end{equation}
+For the prescription~\eqref{eq:perception}--\eqref{eq:joint} and every finite $\tau_A,\tau_B>0$, both energy covariance denominators equal one, and
+\begin{equation}
+ \langle11|\mathcal F(\rho_*)|11\rangle
+ =-\frac{8\ln3}{81}\left(\frac1{\tau_A}+\frac1{\tau_B}\right)<0.\label{eq:negative}
+\end{equation}
+Hence there is no right-differentiable positive-state trajectory starting at $\rho_*$ whose right derivative there equals $\mathcal F(\rho_*)$.
+\end{theorem}
+\begin{proof}
+The witness is a separable positive trace-one matrix. Its marginals are full rank:
+\begin{equation}
+ a=b=\diag(2/3,1/3).
+\end{equation}
+Put $\ell=\ln3>0$. Direct application of the specified kernel convention gives
+\begin{align}
+ S(\rho_*)&=\ell\diag(1,1,1,0),\\
+ S^A=S^B&=\ell\diag(1,2/3),\\
+ \tr(aS^A)=\tr(bS^B)&=8\ell/9,\\
+ \Delta S^A=\Delta S^B&=\ell\diag(1/9,-2/9).\label{eq:entropyvalues}
+\end{align}
+The perceived Hamiltonians are $H^A=H^B=X$, since the complementary local mean of $X$ is zero. Thus $(H,H)^A=(H,H)^B=\tr(aX^2)=1$. The covariance of the off-diagonal $X$ with each diagonal $\Delta S^J$ is zero, so $\beta_A=\beta_B=0$. Substitution in~\eqref{eq:dissipator} yields
+\begin{equation}
+ G_J=\frac{8\ell}{27\tau_J}\diag(1,-1).\label{eq:G}
+\end{equation}
+Both terms have zero trace and zero locally perceived mean-energy derivative. Their joint $11$ entry is the right side of~\eqref{eq:negative}. Also $\rho_*|11\rangle=0$, which makes $\langle11|[H,\rho_*]|11\rangle=0$. Lemma~\ref{lem:tangent} proves the conclusion.
+\end{proof}
+
+For equal times $\tau_A=\tau_B=\tau$, the entire dissipative contribution is
+\begin{equation}
+ \mathcal F_{\rm diss}(\rho_*)=\frac{\ln3}{81\tau}\diag(32,-8,-8,-16).\label{eq:diagonal}
+\end{equation}
+The nonzero Hamiltonian commutator need not be discarded: it has zero diagonal and does not affect the kernel test. The example uses neither a zero energy-variance denominator nor a redundant energy constraint. Its Hamiltonian is bounded below by $-2$; adding $2I$ makes it nonnegative without changing any centered quantities or the vector field.
+
+\section{Why marginal constraints do not suffice}
+The local conditions checked above do not control compatibility of the evolving marginals with the joint correlations.
+\begin{proposition}[Connected-correlation identity]\label{prop:correlation}
+Let $H=H_A\otimes I+I\otimes H_B$ and suppose $G_A,G_B$ in~\eqref{eq:joint} are traceless. Along any differentiable solution, define $C=\rho-a\otimes b$. Then
+\begin{equation}
+ \dot C=-i[H,C].\label{eq:correlation}
+\end{equation}
+In particular the dissipative contribution to $\dot C$ vanishes.
+\end{proposition}
+\begin{proof}
+Partial tracing~\eqref{eq:joint} gives $\dot a=-i[H_A,a]+G_A$ and $\dot b=-i[H_B,b]+G_B$. Differentiate $a\otimes b$, subtract from $\dot\rho$, and use the product rule. This calculation does not require $G_J$ to depend only on its own marginal.
+\end{proof}
+At the witness, $C=\diag(-1,1,1,-1)/9$. Both local $1$ populations initially decrease by~\eqref{eq:G}. The product of those populations therefore decreases from $1/9$, while the dissipative change of the connected $11$ correlation is zero. The resulting joint population has a negative derivative. This calculation identifies the missing joint constraint without asserting that every instance of~\eqref{eq:joint} fails positivity.
+
+\section{Minimum size of an instantaneous repair}
+The witness also quantifies the change required of a corrected generator. Use the usual trace norm $\norm{R}_1=\tr\sqrt{R^\dagger R}$, and set
+\begin{equation}
+ c=\frac{8\ln3}{81}\left(\frac1{\tau_A}+\frac1{\tau_B}\right)>0.
+\end{equation}
+\begin{proposition}[Sharp necessary repair bounds]\label{prop:repair}
+Suppose a Hermitian correction $R$ is added to $\mathcal F(\rho_*)$, and the resulting vector is the initial derivative of a positive-state curve. Then $R_{11,11}\geq c$. If $\tr R=0$, necessarily
+\begin{equation}
+ \tfrac12\norm{R}_1\geq c.\label{eq:repair1}
+\end{equation}
+If in addition both marginal derivatives are preserved, so that $\tr_A R=\tr_B R=0$, then
+\begin{equation}
+ \tfrac12\norm{R}_1\geq2c.\label{eq:repair2}
+\end{equation}
+These lower bounds are sharp as instantaneous tangent conditions at this witness.
+\end{proposition}
+\begin{proof}
+Lemma~\ref{lem:tangent} and~\eqref{eq:negative} imply $R_{11,11}\geq c$. For any Hermitian $R$, its diagonal entries $r_i$ satisfy
+\begin{equation}
+ \sum_i|r_i|\leq\norm{R}_1.\label{eq:pinching}
+\end{equation}
+For completeness, write $R=\sum_j\lambda_j|u_j\rangle\langle u_j|$ in an orthonormal eigenbasis. Each diagonal entry obeys
+\[
+ |r_i|\leq\sum_j|\lambda_j||\langle i|u_j\rangle|^2.
+\]
+Summing over $i$ proves~\eqref{eq:pinching}. If $\sum_i r_i=0$, the other three diagonal entries sum to $-r_{11}$, so their absolute values sum to at least $r_{11}$. This gives~\eqref{eq:repair1}.
+
+Zero partial traces impose, on the diagonal, $(r_{00},r_{01},r_{10},r_{11})=(r,-r,-r,r)$. Equation~\eqref{eq:pinching} then gives $\norm{R}_1\geq4r\geq4c$. The choices
+\begin{equation}
+ R_0=c\diag(-1,0,0,1),\qquad R_1=c\diag(1,-1,-1,1)
+\end{equation}
+attain~\eqref{eq:repair1} and~\eqref{eq:repair2}, respectively. Both corrected dissipative derivatives are diagonal, trace zero, and zero on the one-dimensional kernel. On the other three diagonal entries, $\rho_*$ is strictly positive, so a sufficiently short linear step with either corrected dissipative derivative is positive. Conjugating that curve by $e^{-itH}$ gives a positive trace-one curve with the full corrected derivative, including $-i[H,\rho_*]$. Thus the bounds are attained by admissible tangent vectors. For $R_1$, both partial traces vanish and $\tr(HR_1)=0$.
+\end{proof}
+These are pointwise corrections, not constructions of a globally positive SEA flow. In particular the tangent curve used for sharpness need not preserve the prescribed marginal dynamics beyond its initial derivative.
+
+\section{The full-rank limit is a different prescription}
+The discontinuity at the kernel is essential to the scope of Theorem~\ref{thm:witness}. Consider
+\begin{equation}
+ \rho_\delta=\diag(u,u,u,\delta),\qquad u=(1-\delta)/3,
+ \quad 0<\delta<1/4,\quad v=u+\delta.
+\end{equation}
+Keep $H$ and the positive relaxation times fixed. Both marginals are $\diag(2u,v)$, both perceived Hamiltonians remain $X$, the energy variances remain one, and the entropy--energy covariances remain zero. Put $L_u=-\ln u$, $L_\delta=-\ln\delta$. The perceived entropy entries are
+\begin{equation}
+ S^J_{00}=L_u,\qquad S^J_{11}=2uL_u+vL_\delta.
+\end{equation}
+Their difference is $v\ln(u/\delta)$, so $\Delta S^J_{11}=2uv\ln(u/\delta)$. Equations~\eqref{eq:dissipator}--\eqref{eq:joint} give
+\begin{equation}
+ \langle11|\mathcal F(\rho_\delta)|11\rangle
+ =8uv^3\left(\frac1{\tau_A}+\frac1{\tau_B}\right)
+ \ln\frac{u}{\delta}>0.\label{eq:fullrank}
+\end{equation}
+As $\delta\downarrow0$, the prefactor tends to the strictly positive value $\tfrac8{81}(\tau_A^{-1}+\tau_B^{-1})$ and the logarithm diverges to $+\infty$. This inward full-rank limit does not equal the finite negative pointwise value~\eqref{eq:negative}. A restriction to full rank, a non-differentiable boundary trajectory, a different kernel convention, or state-dependent relaxation times vanishing or diverging at the boundary changes a hypothesis and requires its own existence and positivity analysis. The present result does not decide those alternatives.
+
+\section{Scope, verification and conclusion}
+The counterexample concerns the published composite vector field, its uniform metric, the constraints of normalization and mean energy, finite positive relaxation times at the witness, and the stipulated pointwise kernel convention. It neither refutes every SEA construction nor establishes superluminal signaling. It makes no claim about physical nonlinear computation or computational complexity. The source's treatment of globally pure states is also not contradicted: $\bln(\rho)=0$ for a pure projector, whereas our witness has rank three.
+
+The argument is analytic. A separate exact-rational diagnostic checks the matrix substitutions, constraints, unequal times and repair examples, treating $\ln3$ as a positive formal factor. It supports arithmetic only. The repository preserves the original research record and its process-receipt limitation, and records the new check separately. A full-manuscript Lean certification plan accompanies the draft; no formal coverage or independent peer review is claimed.
+
+This reproducible test separates marginal conservation from joint positivity. A correction must change the boundary or domain interpretation, or address the incompatibility between local drift and retained connected correlations.
+
+\paragraph{Author and assistance disclosure.}
+OpenAI Codex assisted with derivation, source comparison, drafting and internal verification. This is a preparation-stage candidate. Funding and competing-interest declarations remain to be finalized for submission; no external funding source is asserted here.
+
+\begin{thebibliography}{9}
+\bibitem{RayBeretta}
+R.~K.~Ray and G.~P.~Beretta,
+``No-Signaling in Steepest Entropy Ascent: A Nonlinear, Non-Local, Non-Equilibrium Quantum Dynamics of Composite Systems Strongly Compatible with the Second Law,''
+\emph{Entropy} \textbf{27}, 1018 (2025).
+\href{https://doi.org/10.3390/e27101018}{doi:10.3390/e27101018}.
+Also \href{https://arxiv.org/abs/2301.11548v5}{arXiv:2301.11548v5} (29 September 2025).
+\end{thebibliography}
+\end{document}

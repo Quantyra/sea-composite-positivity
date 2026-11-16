@@ -37,6 +37,6 @@ Primary full-source snapshots are not redistributed in this repository. `tools/f
 
 Scientific custody: Quantyra Quantum S279/S289. Manuscript and certification planning: PaperMill P012/S025. This dedicated satellite holds the technical artifacts. The private repository prepares a reviewable candidate; it does not trigger a release or a proof job. Existing jobs, ownership, parked research and queue priorities remain intact.
 
-Remaining work: independent source/domain and mathematical review, submission metadata and publication decision; PaperMill C1 dependency/type audit, then full C2-C4 formalization and R1-R4 reconciliation when admitted. No claim of a novel first counterexample or globally repaired dynamics is made.
+Remaining work: submission metadata and publication decision; PaperMill C1 dependency/type audit, then full C2-C4 formalization and R1-R4 reconciliation when admitted. Independent source/domain and mathematical review is recommended, not a newly imposed human-approval prerequisite. No claim of a novel first counterexample or globally repaired dynamics is made.
 
 Manuscript and original project documentation: CC BY 4.0. New utility code: MIT. Imported evidence retains its original provenance; primary publications retain their own licenses. See [LICENSE](LICENSE).

@@ -1,5 +1,5 @@
 {
-  "created_utc": "2026-11-16T20:39:10.473684+00:00",
+  "created_utc": "2026-11-16T20:40:59.866622+00:00",
   "scope": "Package inventory and verification, not publication or formal acceptance",
   "verification": {
     "status": "pass",
@@ -58,13 +58,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 4050,
-      "sha256": "234aea4c58171dda679eaceb6198b98c665db97c000a3cde9270b661dfdba896"
+      "bytes": 4114,
+      "sha256": "031ec8c539f42a4bb1ebc8b6e328507ffc74d1b3caa3d7601879e243f9358599"
     },
     {
       "path": "SOURCES.md",
-      "bytes": 5843,
-      "sha256": "f78e753ec590e989423fa5eeaf84ec9d979c7c77aecc99f572818275977b91ec"
+      "bytes": 5914,
+      "sha256": "5c2779d290e69cebcc16219d22235515223d0e8cd0e6bba64ff5ab271724f69f"
     },
     {
       "path": "evidence/provenance.json",
@@ -113,8 +113,8 @@
     },
     {
       "path": "formal/CERTIFICATION-PLAN.md",
-      "bytes": 11179,
-      "sha256": "ab92476d23fe95103082d83864ef569203d2ff66efdcba5c4409dc523f2f3013"
+      "bytes": 11261,
+      "sha256": "3c2fd04a8e1dac0a6ec6827687cf55c1ef989993072e4ccf21de29f3eb63769d"
     },
     {
       "path": "manuscript/main.pdf",
@@ -128,8 +128,8 @@
     },
     {
       "path": "reviews/INTERNAL-REVIEW.md",
-      "bytes": 4068,
-      "sha256": "2bfc1dae0c70e4078b452259a8047ebb4567d544658a2d4359c5b520cff0047c"
+      "bytes": 4167,
+      "sha256": "99029be42603f200cffb7b1150a9958ccd667679f395dae8512a734ae4c6ad5b"
     },
     {
       "path": "sources/README.md",

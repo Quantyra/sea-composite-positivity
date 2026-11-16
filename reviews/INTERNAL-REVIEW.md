@@ -11,7 +11,7 @@
 | Mathematical | Does diagonal arithmetic suffice for the norm bound against arbitrary repairs? | Wrote the Hermitian spectral decomposition proof of sum abs(diagonal)<=trace norm. Off-diagonal repairs included in the lower bound. |
 | Mathematical | Can the Hamiltonian be dropped? | Only its diagonal/kernel expectation is zero. Kept the full commutator in the flow and in sharpness. |
 | Adversarial scope | Does approaching the witness from full rank reproduce the sign? | Derived exact opposite-sign expression 8uv^3(sum inverse times) log(u/delta), positive and divergent. Section 5 makes the distinction explicit. |
-| Adversarial scope | Does preserving connected correlation mean all correlation measures are constant? | Claimed only Cdot=-i[H,C] for local H; no information-measure assertion. |
+| Adversarial scope | Does preserving connected correlation mean the operator or all correlation measures are constant? | Claimed only Cdot=-i[H,C] for local H; abstract explicitly says unitary evolution, not constant operator; no information-measure assertion. |
 | Adversarial scope | Are other SEA formulations, pure states, physical nonlinear computing or signaling refuted? | Explicitly excluded those conclusions. Added the pure-projector control and restricted related-work comparison. |
 | Reproducibility | Earlier S279 child exit code was absent | Original receipt imported unchanged. New independent Python implementation ran once, 122 exact checks, exit 0, 0.271 seconds wall, under the preregistered 60-second cap. This does not retrospectively fill the old receipt. |
 

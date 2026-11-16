@@ -3,15 +3,15 @@
   "compiler": "Tectonic 0.17.0",
   "pymupdf_version": "1.28.2",
   "source_date_epoch": 1794787200,
-  "source_sha256": "2e9223c62b1601bbb18b11f1d86a8dcc7362fe91b09e6f68e688d1550cbc9b70",
-  "pdf_sha256": "dad2b64d5e6a329c18ca6eda33641e329546616c9d60b8649ed90c50c1bdf572",
+  "source_sha256": "5ac0dd44c6dc2031576982eb7be2284214ec5a9bb43279a2a9ea985e1fcdd1fb",
+  "pdf_sha256": "646253b7f920c58e264baa1d9432b44990cfcad35c3945b4185d9b4203513e43",
   "pages": 5,
   "final_log_diagnostics": [],
   "environment_messages": [
     "Fontconfig error: Cannot load default config file: No such file: (null)"
   ],
   "page_text_lengths": [
-    2361,
+    2338,
     2194,
     2168,
     2156,

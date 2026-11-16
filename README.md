@@ -1,19 +1,20 @@
 # Boundary positivity in composite steepest-entropy-ascent dynamics
 
-Preparation-stage manuscript by Daniel Fredriksen, Quantyra Inc. Candidate 0.1.0, 2026-11-16. **Unpublished; no DOI, independent peer review or Lean certification is claimed.**
+Preparation-stage manuscript by Daniel Fredriksen, Quantyra Inc. Candidate 0.1.0, 2026-11-16. **Public manuscript draft; no archival release, DOI, independent human peer review or Lean certification.** Separate Claude, Grok and AGY reviews are complete on the corrected source under S290; [reports and dispositions](reviews/three-lens-2026-11-16/DISPOSITION.md) retain their exact scope and failed attempts. These are AI reviews.
 
 The paper gives a rank-three, two-qubit counterexample to positivity of the pointwise composite equation in Ray and Beretta, *Entropy* 27, 1018 (2025), under its stated kernel-logarithm convention, uniform metric and normalization/mean-energy constraints. For arbitrary finite positive local relaxation times, the initially zero joint population has derivative
 
 \[
--\frac{8\log 3}{81}(\tau_A^{-1}+\tau_B^{-1})<0.
+-\frac{8\ln 3}{81}(\tau_A^{-1}+\tau_B^{-1})<0.
 \]
 
-The marginals are full rank and both energy covariance denominators are one. The paper also proves a connected-correlation identity, sharp instantaneous repair bounds, and an explicit inward full-rank limit. These distinguish a pointwise boundary failure from other SEA equations or boundary completions. No physical nonlinear-computing, signaling, general simulation or complexity-class result follows.
+The marginals are full rank and both energy covariance denominators are one. The paper also proves a connected-correlation identity, sharp instantaneous repair bounds, and an explicit divergent full-rank approach. These distinguish a pointwise boundary failure from other SEA equations or boundary completions. No physical nonlinear-computing, signaling, general simulation or complexity-class result follows.
 
 ## Read the package
 
 - [Manuscript PDF](manuscript/main.pdf) and [LaTeX](manuscript/main.tex).
 - [Claims and assumptions](CLAIMS.md), [primary-source correspondence and novelty limits](SOURCES.md).
+- [Three-lens review summary](reviews/REVIEW-SUMMARY.json) and [dispositions](reviews/three-lens-2026-11-16/DISPOSITION.md).
 - [Internal review and dispositions](reviews/INTERNAL-REVIEW.md): same-agent mathematical/source/adversarial review, not independent provider review.
 - [Full-manuscript Lean certification plan](formal/CERTIFICATION-PLAN.md): planned modules and gates; no accepted declarations.
 - [Exact-check receipt](verification/exact-check.json), [process receipt](verification/exact-process.json), [build receipt](verification/build.json).
@@ -35,7 +36,7 @@ Primary full-source snapshots are not redistributed in this repository. `tools/f
 
 ## Custody and next gates
 
-Scientific custody: Quantyra Quantum S279/S289. Manuscript and certification planning: PaperMill P012/S025. This dedicated satellite holds the technical artifacts. The private repository prepares a reviewable candidate; it does not trigger a release or a proof job. Existing jobs, ownership, parked research and queue priorities remain intact.
+Scientific custody: Quantyra Quantum S279/S289; requested review S290. Manuscript and certification planning: PaperMill P012/S025. This dedicated satellite holds the technical artifacts. Dan explicitly requested public visibility on 2026-11-16 to enable Zenodo; the change was verified. Dan subsequently confirmed Zenodo is enabled. No release, DOI or proof job was triggered. Existing jobs, ownership, parked research and queue priorities remain intact.
 
 Remaining work: submission metadata and publication decision; PaperMill C1 dependency/type audit, then full C2-C4 formalization and R1-R4 reconciliation when admitted. Independent source/domain and mathematical review is recommended, not a newly imposed human-approval prerequisite. No claim of a novel first counterexample or globally repaired dynamics is made.
 

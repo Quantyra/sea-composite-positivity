@@ -1,0 +1,14 @@
+{
+  "checked_utc": "2026-11-16T21:30:51.279069+00:00",
+  "repository": {
+    "isPrivate": false,
+    "nameWithOwner": "Quantyra/sea-composite-positivity",
+    "url": "https://github.com/Quantyra/sea-composite-positivity",
+    "visibility": "PUBLIC"
+  },
+  "zenodo_enabled": true,
+  "zenodo_evidence": "Dan explicitly confirmed in the active conversation on2026-11-16; not an API deposit/release verification",
+  "github_releases": [],
+  "doi_created_by_this_work": false,
+  "authority": "Make the repo public so I can enable Zenodo for it"
+}

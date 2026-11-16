@@ -1,2 +1,3 @@
 # This research package pins exact source/evidence bytes across platforms.
 * -text
+reviews/three-lens-2026-11-16/*.md whitespace=-blank-at-eol,cr-at-eol

@@ -1,0 +1,26 @@
+{
+  "source_sha256": "8176c99fff1fdb723493452a36eef09f25144987dddebbc1f3b81978572c6ee5",
+  "status": "INPUTS_FROZEN_NOT_REVIEW_COMPLETE",
+  "files": {
+    "manuscript/main.tex": "8176c99fff1fdb723493452a36eef09f25144987dddebbc1f3b81978572c6ee5",
+    "README.md": "522787ffa039e726639c49fe30c8543e2d65a99a3d9a786b53ccfa00a744aad9",
+    "CLAIMS.md": "305c46ff2f770f8a56f3c527b49c15e85cc9f496e226de52e42d0a57fb96f2a0",
+    "SOURCES.md": "e53971665544eef4c4c83289a7b2f7846978937798412773d016ceaefc1507dd",
+    ".zenodo.json": "c2e4b574ca1265a72b3d8ffd45d17ca8125ad876105ecb8beef0fd7b3b15529b",
+    "CITATION.cff": "0e095af7bcfb7d6cd36781623e291273e1a59509f9212591e07939a97d894a01"
+  },
+  "assignments": {
+    "claude": {
+      "packet": "reviews/three-lens-2026-11-16/closeout-claude-packet.txt",
+      "sha256": "94faaed58bcd09f8a78dc0729d0d63c680c73a840ea84e7240c0da0f7204abb6"
+    },
+    "grok": {
+      "packet": "reviews/three-lens-2026-11-16/closeout-grok-packet.txt",
+      "sha256": "70406ff4186f5528424039988a83093102aa90a7a0c06385f83b0e94ce05a5a4"
+    },
+    "agy": {
+      "packet": "reviews/three-lens-2026-11-16/closeout-agy-packet.txt",
+      "sha256": "5fa5175f39dcce0377344909cc638406bb3720dbb94af6828f630fad3599b4ef"
+    }
+  }
+}

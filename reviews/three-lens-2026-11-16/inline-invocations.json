@@ -1,0 +1,15 @@
+[
+  {
+    "provider": "agy",
+    "phase": "inline",
+    "configured_model": "gemini-3.8-flash-high",
+    "effort": "high",
+    "binary_sha256": "8803c289cac04d6e53f2211592d9981c2d5760bc0d9b4a7f222ef6ecc7abb38a",
+    "started_utc": "2026-11-16T21:23:47.363509+00:00",
+    "elapsed_seconds": 76.55,
+    "source_sha256": "8176c99fff1fdb723493452a36eef09f25144987dddebbc1f3b81978572c6ee5",
+    "input_packet_sha256": "5fa5175f39dcce0377344909cc638406bb3720dbb94af6828f630fad3599b4ef",
+    "status": "INCOMPLETE_RESPONSE",
+    "exit_code": 0
+  }
+]

@@ -1,0 +1,53 @@
+[
+  {
+    "provider": "claude",
+    "phase": "final",
+    "configured_model": "opus",
+    "effort": "medium",
+    "binary_sha256": "e896a9d8da519353a49bf69ca4a695ba7e09067752687c675b3969041e632d52",
+    "started_utc": "2026-11-16T21:14:52.650188+00:00",
+    "elapsed_seconds": 174.09,
+    "source_sha256": "54818f5de35272b76c84e661a2eba0da0767e36b9162cee6b953fe44188eb91a",
+    "input_packet_sha256": "820c45a26d48bd24e2a5f7b52d03866187267335233058542e0af7082ec93818",
+    "status": "TERMINAL",
+    "exit_code": 0,
+    "report": "reviews/three-lens-2026-11-16/claude-final.md",
+    "report_sha256": "3d692af5508cbf598c2ed9d2cdff87bf5339f7f6fed3b729226c93e236750d9e",
+    "raw_response_sha256": "99c5cb5bde6748b68da0abfdb12f1c4fc0dfa1803246b8cd3f488386c06efe92",
+    "returned_model": "claude-opus-5-5",
+    "local_path_redactions": 0,
+    "completion_verified": true
+  },
+  {
+    "provider": "grok",
+    "phase": "final",
+    "configured_model": "grok-4.7",
+    "effort": "medium",
+    "binary_sha256": "47ad7fbc51767b8b301714111a1e452acc2c89912c08be260e1779a383302a4c",
+    "started_utc": "2026-11-16T21:14:45.830203+00:00",
+    "elapsed_seconds": 695.37,
+    "source_sha256": "54818f5de35272b76c84e661a2eba0da0767e36b9162cee6b953fe44188eb91a",
+    "input_packet_sha256": "9eb61e333c8c6fe6053b83d6973d8fc4eedf399507ab01c3264791453cf65bb3",
+    "status": "TERMINAL",
+    "exit_code": 0,
+    "report": "reviews/three-lens-2026-11-16/grok-final.md",
+    "report_sha256": "1e8563884be5cecac21323ee8726004aec03038bd2d928d3ea9670a03b81e536",
+    "raw_response_sha256": "5eb6691792a34eedf8e216b2fa2cac9b471e9e559da457008898762faa3b6a22",
+    "returned_model": "grok-4.7-build",
+    "local_path_redactions": 0,
+    "completion_verified": true
+  },
+  {
+    "provider": "agy",
+    "phase": "final",
+    "configured_model": "gemini-3.8-flash-high",
+    "effort": "high",
+    "binary_sha256": "8803c289cac04d6e53f2211592d9981c2d5760bc0d9b4a7f222ef6ecc7abb38a",
+    "started_utc": "2026-11-16T21:14:47.743874+00:00",
+    "elapsed_seconds": 92.47,
+    "source_sha256": "54818f5de35272b76c84e661a2eba0da0767e36b9162cee6b953fe44188eb91a",
+    "input_packet_sha256": "af34150836a3c78f921c00a1e98f43725980921452db1b501c39813e2d15a13b",
+    "status": "INCOMPLETE_RESPONSE",
+    "exit_code": 0
+  }
+]

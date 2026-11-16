@@ -1,11 +1,14 @@
 """Verify frozen package receipts and evidence; never reruns mathematics or publishes."""
-import hashlib,json,re
+import hashlib,json,re,sys
 from pathlib import Path
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+from verify_reviews import check_reviews
 ROOT=Path(__file__).resolve().parents[1]
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def read(p):return json.loads((ROOT/p).read_text(encoding='utf-8-sig'))
 def require(ok,msg):
     if not ok:raise SystemExit(msg)
+review_check=check_reviews()
 build=read('verification/build.json')
 require(build['source_sha256']==sha(ROOT/'manuscript/main.tex'),'LaTeX/build mismatch')
 require(build['pdf_sha256']==sha(ROOT/'manuscript/main.pdf'),'PDF/build mismatch')

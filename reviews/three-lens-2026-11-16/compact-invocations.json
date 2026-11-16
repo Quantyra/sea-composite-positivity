@@ -1,0 +1,21 @@
+[
+  {
+    "provider": "agy",
+    "phase": "compact",
+    "configured_model": "gemini-3.8-flash-high",
+    "effort": "high",
+    "binary_sha256": "8803c289cac04d6e53f2211592d9981c2d5760bc0d9b4a7f222ef6ecc7abb38a",
+    "started_utc": "2026-11-16T21:27:06.777293+00:00",
+    "elapsed_seconds": 57.93,
+    "source_sha256": "8176c99fff1fdb723493452a36eef09f25144987dddebbc1f3b81978572c6ee5",
+    "input_packet_sha256": "0bdf131222c1cb1429596ace2d6aee0cc459d0b30156db73c82c36b93b197f02",
+    "status": "TERMINAL",
+    "exit_code": 0,
+    "report": "reviews/three-lens-2026-11-16/agy-compact.md",
+    "report_sha256": "c938946b9ca9c3607332f60e694bf40cc6ed50141f11287037be01261f7b072b",
+    "raw_response_sha256": "e3794a133735ff87909d2bd940772809c39fc905d7610ddd99bc2c0728a3e27e",
+    "returned_model": "Not attested by returned JSON",
+    "local_path_redactions": 0,
+    "completion_verified": true
+  }
+]

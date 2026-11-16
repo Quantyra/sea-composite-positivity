@@ -1,0 +1,29 @@
+{
+  "source_sha256": "54818f5de35272b76c84e661a2eba0da0767e36b9162cee6b953fe44188eb91a",
+  "status": "INPUTS_FROZEN_NOT_REVIEW_COMPLETE",
+  "files": {
+    "manuscript/main.tex": "54818f5de35272b76c84e661a2eba0da0767e36b9162cee6b953fe44188eb91a",
+    "README.md": "522787ffa039e726639c49fe30c8543e2d65a99a3d9a786b53ccfa00a744aad9",
+    "CLAIMS.md": "305c46ff2f770f8a56f3c527b49c15e85cc9f496e226de52e42d0a57fb96f2a0",
+    "SOURCES.md": "e53971665544eef4c4c83289a7b2f7846978937798412773d016ceaefc1507dd",
+    ".zenodo.json": "c2e4b574ca1265a72b3d8ffd45d17ca8125ad876105ecb8beef0fd7b3b15529b",
+    "CITATION.cff": "0e095af7bcfb7d6cd36781623e291273e1a59509f9212591e07939a97d894a01"
+  },
+  "assignments": {
+    "claude": {
+      "lens": "Proof-adversarial final recheck. Recompute critical formulas and verify your prior E1 domain citations and E2 abstract scope are resolved. Remaining claims are the same pointwise boundary theorem, tangent repairs and full-rank divergence. Check that no new overclaim was introduced.",
+      "packet": "reviews/three-lens-2026-11-16/final-claude-packet.txt",
+      "sha256": "820c45a26d48bd24e2a5f7b52d03866187267335233058542e0af7082ec93818"
+    },
+    "grok": {
+      "lens": "Quantitative/resource final recheck. Audit constants, all quantifiers, pointwise vs full-rank and tangent vs global repair; check the revised abstract, ln notation and claim ranges. Confirm or reject this exact final source after your initial review.",
+      "packet": "reviews/three-lens-2026-11-16/final-grok-packet.txt",
+      "sha256": "9eb61e333c8c6fe6053b83d6973d8fc4eedf399507ab01c3264791453cf65bb3"
+    },
+    "agy": {
+      "lens": "Non-claims/attribution final recheck. Check exact revised abstract, domain pages, metadata and public-draft status. Uniform metric is the stated scope; do not relabel it Fisher-Rao. Finite positive times at the witness are enough; variable times with boundary singular behavior change hypotheses. No assertion of archival priority or publication readiness from reviewer approval.",
+      "packet": "reviews/three-lens-2026-11-16/final-agy-packet.txt",
+      "sha256": "af34150836a3c78f921c00a1e98f43725980921452db1b501c39813e2d15a13b"
+    }
+  }
+}

@@ -19,7 +19,7 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-We examine the pointwise composite steepest-entropy-ascent equation stated by Ray and Beretta, with a uniform metric, normalization and mean-energy constraints, and their prescribed value of the logarithm on the kernel. A separable rank-three state of two qubits, with full-rank marginals and nonzero energy covariance denominators, has a strictly negative instantaneous population derivative in its kernel. Consequently, the specified vector field cannot generate a right-differentiable positive-state trajectory from every density operator in that domain. The calculation holds for arbitrary finite positive local relaxation times. We derive the unitary evolution of the connected-correlation operator, sharp instantaneous trace-norm bounds on repairs, and the distinct full-rank boundary limit. The conclusion concerns the displayed pointwise prescription; it does not exclude full-rank restricted dynamics, alternative boundary completions, or other steepest-entropy-ascent models.
+We examine the pointwise composite steepest-entropy-ascent equation stated by Ray and Beretta, with a uniform metric, normalization and mean-energy constraints, and their prescribed value of the logarithm on the kernel. A separable rank-three state of two qubits, with full-rank marginals and nonzero energy covariance denominators, has a strictly negative instantaneous population derivative in its kernel. Consequently, no right-differentiable positive-state trajectory from this witness can satisfy the specified vector field initially. The calculation holds for arbitrary finite positive local relaxation times. For noninteracting Hamiltonians we derive the unitary evolution of the connected-correlation operator. We also derive sharp instantaneous trace-norm bounds on repairs and the divergent full-rank approach. The conclusion concerns the displayed pointwise prescription; it does not exclude full-rank restricted dynamics, alternative boundary completions, or other steepest-entropy-ascent models.
 \end{abstract}
 
 \section{The equation and the claim being tested}
@@ -50,7 +50,7 @@ The joint vector field under examination is
 \end{equation}
 Equation~\eqref{eq:joint} is equation~(39) of Ref.~\cite{RayBeretta}, with its local dissipators specialized using equations~(59)--(62). In particular, its dissipative terms contain products with the complementary \emph{marginal}; they are not anticommutators of embedded local operators with the joint $\rho$. Replacing them by the latter expression would define a different equation.
 
-We consider $\rho$ as a density operator in the source's homogeneous-state domain, not as an epistemic ensemble evolved component by component. The source explicitly defines~\eqref{eq:blog} at zero, treats pure states, and describes nonnegativity of the overall density operator after equation~(62). The claim tested here is therefore the existence, from the witness below, of a right-differentiable positive trajectory satisfying the displayed vector field at its initial time. An initial-value law restricted to strictly positive density matrices is a narrower claim.
+We use the source's homogeneous-state domain: Section~5, p.~7, explicitly includes all density operators, idempotent and non-idempotent; Section~4, p.~6, distinguishes them from epistemic ensembles. The source defines~\eqref{eq:blog} at zero, treats globally pure states in Section~11, p.~18, and describes overall nonnegativity after equation~(62). The claim tested here is existence, from the witness below, of a right-differentiable positive trajectory satisfying the displayed field initially. A law restricted to strictly positive density matrices is a narrower claim.
 
 \section{An explicit boundary witness}
 We first state the elementary necessary tangent condition used in the test. No existence theorem for the differential equation is assumed.
@@ -106,7 +106,7 @@ The nonzero Hamiltonian commutator need not be discarded: it has zero diagonal a
 \section{Why marginal constraints do not suffice}
 The local conditions checked above do not control compatibility of the evolving marginals with the joint correlations.
 \begin{proposition}[Connected-correlation identity]\label{prop:correlation}
-Let $H=H_A\otimes I+I\otimes H_B$ and suppose $G_A,G_B$ in~\eqref{eq:joint} are traceless. Along any differentiable solution, define $C=\rho-a\otimes b$. Then
+Let $H=H_A\otimes I+I\otimes H_B$ and suppose $G_A,G_B$ in~\eqref{eq:joint} are traceless. Along any differentiable trace-one solution, define $C=\rho-a\otimes b$. Then
 \begin{equation}
  \dot C=-i[H,C].\label{eq:correlation}
 \end{equation}
@@ -115,7 +115,7 @@ In particular the dissipative contribution to $\dot C$ vanishes.
 \begin{proof}
 Partial tracing~\eqref{eq:joint} gives $\dot a=-i[H_A,a]+G_A$ and $\dot b=-i[H_B,b]+G_B$. Differentiate $a\otimes b$, subtract from $\dot\rho$, and use the product rule. This calculation does not require $G_J$ to depend only on its own marginal.
 \end{proof}
-At the witness, $C=\diag(-1,1,1,-1)/9$. Both local $1$ populations initially decrease by~\eqref{eq:G}. The product of those populations therefore decreases from $1/9$, while the dissipative change of the connected $11$ correlation is zero. The resulting joint population has a negative derivative. This calculation identifies the missing joint constraint without asserting that every instance of~\eqref{eq:joint} fails positivity.
+The cancellation formalizes the source's stated aim of preventing dissipative correlation buildup for noninteracting subsystems (p.~12). At the witness, $C=\diag(-1,1,1,-1)/9$. Both local $1$ populations initially decrease by~\eqref{eq:G}. The product of those populations therefore decreases from $1/9$, while the dissipative change of the connected $11$ correlation is zero. The resulting joint population has a negative derivative. This calculation identifies the missing joint constraint without asserting that every instance of~\eqref{eq:joint} fails positivity.
 
 \section{Minimum size of an instantaneous repair}
 The witness also quantifies the change required of a corrected generator. Use the usual trace norm $\norm{R}_1=\tr\sqrt{R^\dagger R}$, and set
@@ -123,7 +123,7 @@ The witness also quantifies the change required of a corrected generator. Use th
  c=\frac{8\ln3}{81}\left(\frac1{\tau_A}+\frac1{\tau_B}\right)>0.
 \end{equation}
 \begin{proposition}[Sharp necessary repair bounds]\label{prop:repair}
-Suppose a Hermitian correction $R$ is added to $\mathcal F(\rho_*)$, and the resulting vector is the initial derivative of a positive-state curve. Then $R_{11,11}\geq c$. If $\tr R=0$, necessarily
+Suppose a Hermitian correction $R$ is added to $\mathcal F(\rho_*)$, and the resulting vector is the right derivative at zero of a positive semidefinite curve $\rho(t)$ with $\rho(0)=\rho_*$. Then $R_{11,11}\geq c$. If $\tr R=0$, necessarily
 \begin{equation}
  \tfrac12\norm{R}_1\geq c.\label{eq:repair1}
 \end{equation}
@@ -175,10 +175,10 @@ The counterexample concerns the published composite vector field, its uniform me
 
 The argument is analytic. A separate exact-rational diagnostic checks the matrix substitutions, constraints, unequal times and repair examples, treating $\ln3$ as a positive formal factor. It supports arithmetic only. The repository preserves the original research record and its process-receipt limitation, and records the new check separately. A full-manuscript Lean certification plan accompanies the draft; no formal coverage or independent peer review is claimed.
 
-This reproducible test separates marginal conservation from joint positivity. A correction must change the boundary or domain interpretation, or address the incompatibility between local drift and retained connected correlations.
+This reproducible test separates marginal conservation from joint positivity. Any correction must alter at least one hypothesis of Theorem~\ref{thm:witness}; the paper does not classify all possible replacements.
 
 \paragraph{Author and assistance disclosure.}
-OpenAI Codex assisted with derivation, source comparison, drafting and internal verification. This is a preparation-stage candidate. Funding and competing-interest declarations remain to be finalized for submission; no external funding source is asserted here.
+OpenAI Codex assisted with derivation, source comparison, drafting and internal verification. Separate Claude, Grok and AGY review reports and their source hashes are tracked in the repository; those receipts determine the review status and do not constitute human peer review or formal certification. This is a preparation-stage candidate. Funding and competing-interest declarations remain to be finalized for submission; no external funding source is asserted here.
 
 \begin{thebibliography}{9}
 \bibitem{RayBeretta}

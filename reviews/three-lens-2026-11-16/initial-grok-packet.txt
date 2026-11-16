@@ -1,0 +1,752 @@
+Independent AI review of the SEA boundary-positivity manuscript.
+Source SHA-256: 5ac0dd44c6dc2031576982eb7be2284214ec5a9bb43279a2a9ea985e1fcdd1fb
+Lens: Complexity/resource and quantitative-scope. Audit all quantifiers and constants, full-rank versus pointwise kernel interpretation, instantaneous versus global repair, arbitrary unequal times, constraints, exact diagnostic limits and the absence of computational/physical claims. Independently recompute the most important formulas and identify missing obligations or exaggerated scope.
+Read ONLY supplied material; no commands, edits, delegation, other files or external requests, except reading this exact packet if required by the CLI. Return the source SHA-256, severity-tagged findings with exact theorem/equation locations, attempted falsifiers, and GO / GO-WITH-NOTES / REVISE / INCOMPLETE. Do not invent source content, assert human review, kernel acceptance or exhaustive novelty. A positive verdict is not requested. Distinguish essential corrections from optional exposition.
+
+Full LaTeX:
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\tr}{\operatorname{Tr}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\bln}{\operatorname{Bln}}
+\newcommand{\ac}[2]{\{#1,#2\}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\title{A boundary positivity obstruction for a composite\newline steepest-entropy-ascent equation}
+\author{Daniel Fredriksen\\Quantyra Inc.\\
+\small\href{https://orcid.org/0009-0002-9123-7435}{ORCID: 0009-0002-9123-7435}}
+\date{November 16, 2026\\\small Manuscript candidate 0.1.0; not formally certified}
+\begin{document}
+\maketitle
+\begin{abstract}
+We examine the pointwise composite steepest-entropy-ascent equation stated by Ray and Beretta, with a uniform metric, normalization and mean-energy constraints, and their prescribed value of the logarithm on the kernel. A separable rank-three state of two qubits, with full-rank marginals and nonzero energy covariance denominators, has a strictly negative instantaneous population derivative in its kernel. Consequently, the specified vector field cannot generate a right-differentiable positive-state trajectory from every density operator in that domain. The calculation holds for arbitrary finite positive local relaxation times. We derive the unitary evolution of the connected-correlation operator, sharp instantaneous trace-norm bounds on repairs, and the distinct full-rank boundary limit. The conclusion concerns the displayed pointwise prescription; it does not exclude full-rank restricted dynamics, alternative boundary completions, or other steepest-entropy-ascent models.
+\end{abstract}
+
+\section{The equation and the claim being tested}
+Positive semidefiniteness of the joint density operator is a necessary condition for any proposed quantum-state evolution. Positivity of each marginal alone does not imply this joint condition. Ray and Beretta~\cite{RayBeretta} formulate a composite steepest-entropy-ascent (SEA) dynamics using locally perceived global observables. Their Section~10 specializes the equation to a uniform metric with normalization and mean energy as the conserved quantities. We test that specific equation at a state with a nontrivial kernel.
+
+All operators below act on finite-dimensional Hilbert spaces, and $\hbar=k_B=1$. Let $\rho$ be a joint density operator on $A\otimes B$, with marginals $a=\tr_B\rho$ and $b=\tr_A\rho$. For a Hermitian global operator $F$, define
+\begin{align}
+ F^A&=\tr_B[(I\otimes b)F], &F^B&=\tr_A[(a\otimes I)F],\label{eq:perception}\\
+ \Delta F^J&=F^J-I\tr(\rho_JF^J), &
+ (F,G)^J&=\tfrac12\tr\bigl(\rho_J\ac{\Delta F^J}{\Delta G^J}\bigr).
+\end{align}
+The superscripts suppress the dependence on $\rho$. The entropy operator is
+\begin{equation}
+ S(\rho)=-\bln(\rho),\qquad
+ \bln(x)=\begin{cases}\ln x,&0<x\leq1,\\0,&x=0,\end{cases}\label{eq:blog}
+\end{equation}
+with spectral functional calculus. This is the boundary convention in equations~(18)--(20) of Ref.~\cite{RayBeretta}, not a limit from positive eigenvalues.
+
+For positive finite $\tau_A,\tau_B$ and nonzero denominators, write
+\begin{equation}
+ \beta_J=\frac{(H,S)^J}{(H,H)^J},\quad
+ D_J=-\frac{2}{\tau_J}(\Delta S^J-\beta_J\Delta H^J),\quad
+ G_J=-\ac{D_J}{\rho_J}.\label{eq:dissipator}
+\end{equation}
+The joint vector field under examination is
+\begin{equation}
+ \mathcal F(\rho)=-i[H,\rho]+G_A\otimes b+a\otimes G_B.\label{eq:joint}
+\end{equation}
+Equation~\eqref{eq:joint} is equation~(39) of Ref.~\cite{RayBeretta}, with its local dissipators specialized using equations~(59)--(62). In particular, its dissipative terms contain products with the complementary \emph{marginal}; they are not anticommutators of embedded local operators with the joint $\rho$. Replacing them by the latter expression would define a different equation.
+
+We consider $\rho$ as a density operator in the source's homogeneous-state domain, not as an epistemic ensemble evolved component by component. The source explicitly defines~\eqref{eq:blog} at zero, treats pure states, and describes nonnegativity of the overall density operator after equation~(62). The claim tested here is therefore the existence, from the witness below, of a right-differentiable positive trajectory satisfying the displayed vector field at its initial time. An initial-value law restricted to strictly positive density matrices is a narrower claim.
+
+\section{An explicit boundary witness}
+We first state the elementary necessary tangent condition used in the test. No existence theorem for the differential equation is assumed.
+
+\begin{lemma}[Kernel tangent condition]\label{lem:tangent}
+Let $\rho(t)$, $0\leq t<\epsilon$, be a positive semidefinite matrix-valued curve, right differentiable at zero. If $v$ lies in the kernel of $\rho(0)$, then
+\begin{equation}
+ \langle v,\dot\rho(0)v\rangle\geq0.\label{eq:tangent}
+\end{equation}
+\end{lemma}
+\begin{proof}
+The scalar function $f(t)=\langle v,\rho(t)v\rangle$ satisfies $f(0)=0$ and $f(t)\geq0$ for $t\geq0$. Its right derivative is the limit of the nonnegative quotients $f(t)/t$.
+\end{proof}
+
+Let $X=\begin{psmallmatrix}0&1\\1&0\end{psmallmatrix}$, and order the product basis as $00,01,10,11$.
+\begin{theorem}[Failure of the pointwise positive-flow condition]\label{thm:witness}
+Take
+\begin{equation}
+ \rho_*=\frac13\diag(1,1,1,0),\qquad H=X\otimes I+I\otimes X.\label{eq:witness}
+\end{equation}
+For the prescription~\eqref{eq:perception}--\eqref{eq:joint} and every finite $\tau_A,\tau_B>0$, both energy covariance denominators equal one, and
+\begin{equation}
+ \langle11|\mathcal F(\rho_*)|11\rangle
+ =-\frac{8\ln3}{81}\left(\frac1{\tau_A}+\frac1{\tau_B}\right)<0.\label{eq:negative}
+\end{equation}
+Hence there is no right-differentiable positive-state trajectory starting at $\rho_*$ whose right derivative there equals $\mathcal F(\rho_*)$.
+\end{theorem}
+\begin{proof}
+The witness is a separable positive trace-one matrix. Its marginals are full rank:
+\begin{equation}
+ a=b=\diag(2/3,1/3).
+\end{equation}
+Put $\ell=\ln3>0$. Direct application of the specified kernel convention gives
+\begin{align}
+ S(\rho_*)&=\ell\diag(1,1,1,0),\\
+ S^A=S^B&=\ell\diag(1,2/3),\\
+ \tr(aS^A)=\tr(bS^B)&=8\ell/9,\\
+ \Delta S^A=\Delta S^B&=\ell\diag(1/9,-2/9).\label{eq:entropyvalues}
+\end{align}
+The perceived Hamiltonians are $H^A=H^B=X$, since the complementary local mean of $X$ is zero. Thus $(H,H)^A=(H,H)^B=\tr(aX^2)=1$. The covariance of the off-diagonal $X$ with each diagonal $\Delta S^J$ is zero, so $\beta_A=\beta_B=0$. Substitution in~\eqref{eq:dissipator} yields
+\begin{equation}
+ G_J=\frac{8\ell}{27\tau_J}\diag(1,-1).\label{eq:G}
+\end{equation}
+Both terms have zero trace and zero locally perceived mean-energy derivative. Their joint $11$ entry is the right side of~\eqref{eq:negative}. Also $\rho_*|11\rangle=0$, which makes $\langle11|[H,\rho_*]|11\rangle=0$. Lemma~\ref{lem:tangent} proves the conclusion.
+\end{proof}
+
+For equal times $\tau_A=\tau_B=\tau$, the entire dissipative contribution is
+\begin{equation}
+ \mathcal F_{\rm diss}(\rho_*)=\frac{\ln3}{81\tau}\diag(32,-8,-8,-16).\label{eq:diagonal}
+\end{equation}
+The nonzero Hamiltonian commutator need not be discarded: it has zero diagonal and does not affect the kernel test. The example uses neither a zero energy-variance denominator nor a redundant energy constraint. Its Hamiltonian is bounded below by $-2$; adding $2I$ makes it nonnegative without changing any centered quantities or the vector field.
+
+\section{Why marginal constraints do not suffice}
+The local conditions checked above do not control compatibility of the evolving marginals with the joint correlations.
+\begin{proposition}[Connected-correlation identity]\label{prop:correlation}
+Let $H=H_A\otimes I+I\otimes H_B$ and suppose $G_A,G_B$ in~\eqref{eq:joint} are traceless. Along any differentiable solution, define $C=\rho-a\otimes b$. Then
+\begin{equation}
+ \dot C=-i[H,C].\label{eq:correlation}
+\end{equation}
+In particular the dissipative contribution to $\dot C$ vanishes.
+\end{proposition}
+\begin{proof}
+Partial tracing~\eqref{eq:joint} gives $\dot a=-i[H_A,a]+G_A$ and $\dot b=-i[H_B,b]+G_B$. Differentiate $a\otimes b$, subtract from $\dot\rho$, and use the product rule. This calculation does not require $G_J$ to depend only on its own marginal.
+\end{proof}
+At the witness, $C=\diag(-1,1,1,-1)/9$. Both local $1$ populations initially decrease by~\eqref{eq:G}. The product of those populations therefore decreases from $1/9$, while the dissipative change of the connected $11$ correlation is zero. The resulting joint population has a negative derivative. This calculation identifies the missing joint constraint without asserting that every instance of~\eqref{eq:joint} fails positivity.
+
+\section{Minimum size of an instantaneous repair}
+The witness also quantifies the change required of a corrected generator. Use the usual trace norm $\norm{R}_1=\tr\sqrt{R^\dagger R}$, and set
+\begin{equation}
+ c=\frac{8\ln3}{81}\left(\frac1{\tau_A}+\frac1{\tau_B}\right)>0.
+\end{equation}
+\begin{proposition}[Sharp necessary repair bounds]\label{prop:repair}
+Suppose a Hermitian correction $R$ is added to $\mathcal F(\rho_*)$, and the resulting vector is the initial derivative of a positive-state curve. Then $R_{11,11}\geq c$. If $\tr R=0$, necessarily
+\begin{equation}
+ \tfrac12\norm{R}_1\geq c.\label{eq:repair1}
+\end{equation}
+If in addition both marginal derivatives are preserved, so that $\tr_A R=\tr_B R=0$, then
+\begin{equation}
+ \tfrac12\norm{R}_1\geq2c.\label{eq:repair2}
+\end{equation}
+These lower bounds are sharp as instantaneous tangent conditions at this witness.
+\end{proposition}
+\begin{proof}
+Lemma~\ref{lem:tangent} and~\eqref{eq:negative} imply $R_{11,11}\geq c$. For any Hermitian $R$, its diagonal entries $r_i$ satisfy
+\begin{equation}
+ \sum_i|r_i|\leq\norm{R}_1.\label{eq:pinching}
+\end{equation}
+For completeness, write $R=\sum_j\lambda_j|u_j\rangle\langle u_j|$ in an orthonormal eigenbasis. Each diagonal entry obeys
+\[
+ |r_i|\leq\sum_j|\lambda_j||\langle i|u_j\rangle|^2.
+\]
+Summing over $i$ proves~\eqref{eq:pinching}. If $\sum_i r_i=0$, the other three diagonal entries sum to $-r_{11}$, so their absolute values sum to at least $r_{11}$. This gives~\eqref{eq:repair1}.
+
+Zero partial traces impose, on the diagonal, $(r_{00},r_{01},r_{10},r_{11})=(r,-r,-r,r)$. Equation~\eqref{eq:pinching} then gives $\norm{R}_1\geq4r\geq4c$. The choices
+\begin{equation}
+ R_0=c\diag(-1,0,0,1),\qquad R_1=c\diag(1,-1,-1,1)
+\end{equation}
+attain~\eqref{eq:repair1} and~\eqref{eq:repair2}, respectively. Both corrected dissipative derivatives are diagonal, trace zero, and zero on the one-dimensional kernel. On the other three diagonal entries, $\rho_*$ is strictly positive, so a sufficiently short linear step with either corrected dissipative derivative is positive. Conjugating that curve by $e^{-itH}$ gives a positive trace-one curve with the full corrected derivative, including $-i[H,\rho_*]$. Thus the bounds are attained by admissible tangent vectors. For $R_1$, both partial traces vanish and $\tr(HR_1)=0$.
+\end{proof}
+These are pointwise corrections, not constructions of a globally positive SEA flow. In particular the tangent curve used for sharpness need not preserve the prescribed marginal dynamics beyond its initial derivative.
+
+\section{The full-rank limit is a different prescription}
+The discontinuity at the kernel is essential to the scope of Theorem~\ref{thm:witness}. Consider
+\begin{equation}
+ \rho_\delta=\diag(u,u,u,\delta),\qquad u=(1-\delta)/3,
+ \quad 0<\delta<1/4,\quad v=u+\delta.
+\end{equation}
+Keep $H$ and the positive relaxation times fixed. Both marginals are $\diag(2u,v)$, both perceived Hamiltonians remain $X$, the energy variances remain one, and the entropy--energy covariances remain zero. Put $L_u=-\ln u$, $L_\delta=-\ln\delta$. The perceived entropy entries are
+\begin{equation}
+ S^J_{00}=L_u,\qquad S^J_{11}=2uL_u+vL_\delta.
+\end{equation}
+Their difference is $v\ln(u/\delta)$, so $\Delta S^J_{11}=2uv\ln(u/\delta)$. Equations~\eqref{eq:dissipator}--\eqref{eq:joint} give
+\begin{equation}
+ \langle11|\mathcal F(\rho_\delta)|11\rangle
+ =8uv^3\left(\frac1{\tau_A}+\frac1{\tau_B}\right)
+ \ln\frac{u}{\delta}>0.\label{eq:fullrank}
+\end{equation}
+As $\delta\downarrow0$, the prefactor tends to the strictly positive value $\tfrac8{81}(\tau_A^{-1}+\tau_B^{-1})$ and the logarithm diverges to $+\infty$. This inward full-rank limit does not equal the finite negative pointwise value~\eqref{eq:negative}. A restriction to full rank, a non-differentiable boundary trajectory, a different kernel convention, or state-dependent relaxation times vanishing or diverging at the boundary changes a hypothesis and requires its own existence and positivity analysis. The present result does not decide those alternatives.
+
+\section{Scope, verification and conclusion}
+The counterexample concerns the published composite vector field, its uniform metric, the constraints of normalization and mean energy, finite positive relaxation times at the witness, and the stipulated pointwise kernel convention. It neither refutes every SEA construction nor establishes superluminal signaling. It makes no claim about physical nonlinear computation or computational complexity. The source's treatment of globally pure states is also not contradicted: $\bln(\rho)=0$ for a pure projector, whereas our witness has rank three.
+
+The argument is analytic. A separate exact-rational diagnostic checks the matrix substitutions, constraints, unequal times and repair examples, treating $\ln3$ as a positive formal factor. It supports arithmetic only. The repository preserves the original research record and its process-receipt limitation, and records the new check separately. A full-manuscript Lean certification plan accompanies the draft; no formal coverage or independent peer review is claimed.
+
+This reproducible test separates marginal conservation from joint positivity. A correction must change the boundary or domain interpretation, or address the incompatibility between local drift and retained connected correlations.
+
+\paragraph{Author and assistance disclosure.}
+OpenAI Codex assisted with derivation, source comparison, drafting and internal verification. This is a preparation-stage candidate. Funding and competing-interest declarations remain to be finalized for submission; no external funding source is asserted here.
+
+\begin{thebibliography}{9}
+\bibitem{RayBeretta}
+R.~K.~Ray and G.~P.~Beretta,
+``No-Signaling in Steepest Entropy Ascent: A Nonlinear, Non-Local, Non-Equilibrium Quantum Dynamics of Composite Systems Strongly Compatible with the Second Law,''
+\emph{Entropy} \textbf{27}, 1018 (2025).
+\href{https://doi.org/10.3390/e27101018}{doi:10.3390/e27101018}.
+Also \href{https://arxiv.org/abs/2301.11548v5}{arXiv:2301.11548v5} (29 September 2025).
+\end{thebibliography}
+\end{document}
+
+
+README.md:
+# Boundary positivity in composite steepest-entropy-ascent dynamics
+
+Preparation-stage manuscript by Daniel Fredriksen, Quantyra Inc. Candidate 0.1.0, 2026-11-16. **Public manuscript draft; no archival release, DOI, independent human peer review or Lean certification.** Separate provider-native three-lens review is in progress under S290; the earlier internal review alone does not complete it.
+
+The paper gives a rank-three, two-qubit counterexample to positivity of the pointwise composite equation in Ray and Beretta, *Entropy* 27, 1018 (2025), under its stated kernel-logarithm convention, uniform metric and normalization/mean-energy constraints. For arbitrary finite positive local relaxation times, the initially zero joint population has derivative
+
+\[
+-\frac{8\log 3}{81}(\tau_A^{-1}+\tau_B^{-1})<0.
+\]
+
+The marginals are full rank and both energy covariance denominators are one. The paper also proves a connected-correlation identity, sharp instantaneous repair bounds, and an explicit inward full-rank limit. These distinguish a pointwise boundary failure from other SEA equations or boundary completions. No physical nonlinear-computing, signaling, general simulation or complexity-class result follows.
+
+## Read the package
+
+- [Manuscript PDF](manuscript/main.pdf) and [LaTeX](manuscript/main.tex).
+- [Claims and assumptions](CLAIMS.md), [primary-source correspondence and novelty limits](SOURCES.md).
+- [Internal review and dispositions](reviews/INTERNAL-REVIEW.md): same-agent mathematical/source/adversarial review, not independent provider review.
+- [Full-manuscript Lean certification plan](formal/CERTIFICATION-PLAN.md): planned modules and gates; no accepted declarations.
+- [Exact-check receipt](verification/exact-check.json), [process receipt](verification/exact-process.json), [build receipt](verification/build.json).
+- [Original S279 evidence](evidence/s279/proofs/e004-s279-sea-composite-audit-2026-11-15.md), imported byte-for-byte with [provenance](evidence/provenance.json). Its missing child exit code remains disclosed; the new Python check is separate evidence.
+
+## Reproduce
+
+Python 3.13.7 and Tectonic 0.17.0 were used; rendering uses PyMuPDF 1.28.2. The arithmetic check uses only the Python standard library. From the repository root:
+
+```text
+python -B tools/run_exact.py
+python -B tools/build.py --tectonic /path/to/tectonic --render
+python -B tools/verify_package.py
+```
+
+The first command runs a fixed <=4-by-4 rational diagnostic with a 60-second child-process cap. It checks substitutions, four time pairs and two controls; it is not the proof of the analytic statements. Running it again replaces its current receipts, so preserve the frozen commit when reproducing. Tectonic's initial bundle download may require Internet access. Build/render artifacts go under ignored `.build/`; the checked PDF is tracked.
+
+Primary full-source snapshots are not redistributed in this repository. `tools/fetch_sources.py` retrieves the published PDF and arXiv HTML and records each response; a version-notes download returned HTTP 403 although browser inspection succeeded. See [source instructions](sources/README.md) and recorded hashes. `tools/import_evidence.py` is a provenance-import utility requiring the original technical checkout, not a requirement for reproducing the manuscript.
+
+## Custody and next gates
+
+Scientific custody: Quantyra Quantum S279/S289; requested review S290. Manuscript and certification planning: PaperMill P012/S025. This dedicated satellite holds the technical artifacts. Dan explicitly requested public visibility on 2026-11-16 to enable Zenodo; the change was verified. No release, DOI or proof job was triggered. Existing jobs, ownership, parked research and queue priorities remain intact.
+
+Remaining work: submission metadata and publication decision; PaperMill C1 dependency/type audit, then full C2-C4 formalization and R1-R4 reconciliation when admitted. Independent source/domain and mathematical review is recommended, not a newly imposed human-approval prerequisite. No claim of a novel first counterexample or globally repaired dynamics is made.
+
+Manuscript and original project documentation: CC BY 4.0. New utility code: MIT. Imported evidence retains its original provenance; primary publications retain their own licenses. See [LICENSE](LICENSE).
+
+
+CLAIMS.md:
+# Full manuscript claim inventory
+
+Frozen candidate: `manuscript/main.tex`; build and package receipts bind the exact bytes. All entries below have written arguments. None has a Lean certificate or independent review acceptance.
+
+| ID | Claim | Essential assumptions / limits | Manuscript location | Formal target |
+|---|---|---|---|---|
+| D1 | Perceived operators, centered covariance, spectral Bln, local dissipators and joint vector field match the tested equation | Two finite subsystems; Bln(0)=0; uniform metric; normalization and mean energy; nonzero energy variance; hbar=kB=1 | Section 1, equations (1)-(5) | SourceDefinitions / SourceBridge |
+| C1 | A positive curve has a nonnegative kernel quadratic-form right derivative | Positivity for t>=0 near zero; actual right derivative, kernel vector | Lemma 1 | KernelTangent |
+| C2 | The witness is separable, PSD, trace one, rank three; both marginals are diag(2/3,1/3) | Basis 00,01,10,11; complex matrices even though entries are real | Theorem 2 | Witness |
+| C3 | Perceived entropy and Hamiltonian, covariance denominators and generator evaluate as displayed | Natural log; Bln kernel value; covariance denominators exactly 1, not assumed away | Theorem 2 proof, equations (9)-(15) | Witness / SourceBridge |
+| C4 | The kernel derivative is -8 log(3)/81 times the sum of inverse times, strictly negative; no positive right-differentiable initial trajectory obeys it | Every finite positive tauA,tauB; full Hamiltonian commutator included | Theorem 2 | NoPositiveInitialFlow |
+| C5 | Trace and local mean-energy constraints hold; equal-time diagonal formula; H>=-2I and identity shifts leave the field unchanged | Centered perceived covariance; local X Hamiltonian; does not say the whole commutator vanishes | Section 2 | WitnessAuxiliary |
+| C6 | Connected correlation obeys Cdot=-i[H,C] | Local additive H; trace-one marginals; traceless GJ; any differentiable solution; GJ may depend on the global state | Proposition 3 | Correlation |
+| C7 | Witness connected correlation is diag(-1,1,1,-1)/9 and dissipative marginal drift produces the kernel violation | Instantaneous statement; C may rotate under local H | Section 3 | Correlation |
+| C8 | Sum of absolute diagonal entries of Hermitian R is at most its genuine trace norm | Arbitrary Hermitian 4-by-4 complex matrix, not assumed diagonal | Equation (20) and proof | TraceNorm |
+| C9 | Positive tangent correction requires R11,11>=c; trace preserving correction has half trace norm>=c | R Hermitian, tr R=0, corrected field is derivative of a PSD curve | Proposition 4 | RepairBounds |
+| C10 | Both marginal derivatives preserved implies half trace norm>=2c | Both partial traces zero, including off-diagonal constraints | Proposition 4 | RepairBounds |
+| C11 | Both bounds are attained as actual positive trace-one curve derivatives; R1 also preserves both marginal derivatives and mean energy at time zero | R0 and R1 as given; short linear dissipative curve conjugated by exp(-itH) | Proposition 4 proof | RepairSharpness |
+| C12 | Full-rank family has positive kernel-population derivative 8uv^3(sum inverse times) log(u/delta), diverging to +infinity | 0<delta<1/4; u=(1-delta)/3; v=u+delta; fixed positive times | Section 5 | FullRankLimit |
+| C13 | Pure projector has Bln=0; uniform product control has zero dissipative drift | Specified spectral convention; arithmetic controls support special substitutions only | Section 6 / diagnostic | BoundaryControls |
+
+The proposition numbers in the rendered PDF are 1-4 across theorem environments; claim IDs remain stable across editing. Definitions and unnumbered subsidiary claims are part of the certification target, including logarithm identities, Hamiltonian shifts, trace-norm semantics and the one-sided limiting statement.
+
+Excluded conclusions: positivity failure of every full-rank solution; a no-go for all SEA models; superluminal signaling; a globally positive repaired flow; an experimentally realizable nonlinear gate; BPP/BQP progress. Source correspondence is a documented external interpretation in addition to the formally checkable mathematical definition. It must remain reviewable even after Lean checks succeed.
+
+
+SOURCES.md:
+# Primary sources, correspondence and novelty audit
+
+Audit date: 2026-11-16. Named questions: (1) Does the currently supplied publisher equation or domain remove the S279 witness? (2) Does the kernel prescription mean a limit from full rank? (3) Is the specific positivity issue already repaired or identified in inspected primary work? This is a bounded targeted audit, not an exhaustive priority search.
+
+## Authoritative equation
+
+Rohit Kishan Ray and Gian Paolo Beretta, [No-Signaling in Steepest Entropy Ascent: A Nonlinear, Non-Local, Non-Equilibrium Quantum Dynamics of Composite Systems Strongly Compatible with the Second Law](https://doi.org/10.3390/e27101018), *Entropy* 27(10), 1018, published 28 September 2025. [arXiv v5](https://arxiv.org/abs/2301.11548v5), 29 September 2025. Use the current publisher PDF for the manuscript claim; the original research record used arXiv v5.
+
+| Source location (printed publisher pages) | Content checked | Manuscript correspondence / result |
+|---|---|---|
+| p.9, equations (18)-(20) | Spectral Bln, including value zero on the kernel; entropy and centered perceived operators | Section 1 preserves the kernel convention instead of replacing it by a divergent logarithm |
+| p.12, equation (39) | Joint dissipator products with complementary marginals | Equation (5) uses GA tensor b + a tensor GB, not embedded local anticommutators with the correlated joint state |
+| pp.15-16, equations (59)-(62) and adjacent text | Uniform metric, normalization/mean-energy projection, factor 2, covariance ratio and nonnegativity discussion | Equation (4) matches these local dissipators; the witness has denominators 1 and beta 0 |
+| Homogeneous-state discussion and pure-state treatment | Density operator as intrinsic state; kernel states included | The witness is used as one allowed mixed homogeneous state, not an epistemic mixture evolved branch by branch |
+
+Publisher PDF: [direct file](https://mdpi-res.com/d_attachment/entropy/entropy-27-01018/article_deploy/entropy-27-01018.pdf), HTTP 200, 7,406,633 bytes, SHA-256 `b120925da27bc6037527576aff66c7809216183fe53823dc9433ba808078c97c`, retrieved 2026-11-16T20:22:29Z. The source PDF has 29 pages. Pages 9, 12, 15 and 16 were visually inspected in addition to text extraction. [Receipt](verification/source-downloads.json); [page extraction/render receipt](verification/source-pages.json).
+
+Original arXiv v5 PDF preserved by S279: SHA-256 `17a84abd01bdeb886c15a6764934cb071a6db8b48758cbce6cbd1c3094382e57`, 29 pages; [source provenance](evidence/provenance.json). The newly downloaded v5 HTML is separately hashed. No claim that the journal and arXiv PDFs are byte-identical is made; their targeted equations agree.
+
+The [publisher version notes](https://www.mdpi.com/1099-4300/27/10/1018/notes) list a version-of-record PDF upload on 28 September 2025 and later **HTML** updates through 1 September 2026. The table does not establish mathematical changes. The current PDF still contains the audited prescription. A raw download of that notes page returned HTTP 403; a separate web-tool inspection succeeded and showed the table. This access failure is retained in the download receipt rather than replaced by a fictitious successful capture.
+
+## Domain and alternative-interpretation tests
+
+- A strictly positive-state restriction removes this particular initial state from the domain; the manuscript explicitly allows that narrower interpretation. It would change the all-density-operator pointwise claim tested here.
+- Taking delta down to zero through full-rank states gives the positive divergent derivative in Section 5, not the negative value obtained by the source's pointwise Bln(0)=0 rule. One cannot substitute one interpretation for the other silently.
+- Full-rank marginals, a separable state and nonzero covariance denominators exclude three elementary singularity explanations. Global rank deficiency remains the deliberate boundary hypothesis.
+- A Hamiltonian bounded below is supplied; shifting its energy origin leaves every centered covariance and commutator unchanged.
+- A boundary completion with no right derivative, modified relaxation time or different joint operator product needs its own analysis. No universal positivity or signaling conclusion is inferred.
+
+## Adjacent primary work and priority limits
+
+G. P. Beretta, R. K. Ray and M. R. von Spakovsky, [Evolution of Hypoequilibrium States in Steepest Entropy Ascent Models for Nonequilibrium Quantum Thermodynamics](https://doi.org/10.3390/e28070772), *Entropy* 28(7), 772, 7 July 2026. The inspected Section 4 CSHE1 construction takes noninteracting, uncorrelated product states; Appendix A restates the composite equation. Our correlated rank-three witness does not refute that product-family invariance result. The paper was not found to supply a demonstrated repair of this particular correlated boundary witness. This comparison does not evaluate all its other models or claims.
+
+Targeted primary-source searches for the arXiv identifier with positivity/correction and the exact article title with comment, plus composite SEA boundary/correlation counterexamples, did not establish a matching published correction in the inspected material. **Absence from those results does not establish priority or novelty.** The draft makes no first-discovery claim. A final current-version/correction check belongs to publication readiness; independent domain-expert review is recommended, not imposed as a human-approval prerequisite by this audit. A 2019 SEA paper surfaced during search but was not used as an evidentiary premise for this manuscript.
+
+The tangent test and Hermitian diagonal trace-norm inequality are elementary standard arguments, written out here. Claimed utility is the explicit source-specific failure, its nondegenerate constraint calculation and quantitative repair requirement, not invention of those general tools.
+
+
+.zenodo.json:
+{
+  "title": "A boundary positivity obstruction for a composite steepest-entropy-ascent equation",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "description": "Preparation-stage manuscript: an explicit boundary positivity obstruction for the stated composite SEA equation, with sharp instantaneous repair bounds and a distinct full-rank limit. No formal certification, general SEA impossibility or physical nonlinear-computing result is claimed.",
+  "creators": [{"name": "Fredriksen, Daniel", "affiliation": "Quantyra Inc.", "orcid": "0009-0002-9123-7435"}],
+  "license": "CC-BY-4.0",
+  "keywords": ["steepest entropy ascent", "quantum thermodynamics", "positivity", "nonlinear quantum dynamics"]
+}
+
+
+CITATION.cff:
+cff-version: 1.2.0
+message: "Unpublished manuscript candidate; no DOI has been assigned. Cite only with its preparation-stage status and commit."
+type: article
+title: "A boundary positivity obstruction for a composite steepest-entropy-ascent equation"
+authors:
+  - family-names: Fredriksen
+    given-names: Daniel
+    affiliation: Quantyra Inc.
+    orcid: "https://orcid.org/0009-0002-9123-7435"
+version: 0.1.0
+license: CC-BY-4.0
+repository-code: "https://github.com/Quantyra/sea-composite-positivity"
+keywords:
+  - steepest entropy ascent
+  - quantum thermodynamics
+  - positivity
+  - nonlinear quantum dynamics
+
+
+Primary-source excerpts (Ray--Beretta, DOI 10.3390/e27101018, CC BY 4.0; supplied current publisher PDF SHA-256 b120925da27bc6037527576aff66c7809216183fe53823dc9433ba808078c97c). Text extraction can lose symbols; flag unreadable equations rather than invent them.
+Published primary source, printed page 9:
+Entropy 2025, 27, 1018
+9 of 29
+Seldom used in composite quantum dynamics but crucial, in our opinion, are the
+physical observables first introduced in [17] and later (starting with [19]) referred to as
+‘local perceptions of global observables’. These are represented via the ‘local perception
+operators’ (LPO) on HJ, defined along with their ‘deviation from the local mean value’
+operators and covariance functionals as follows:
+(X)J
+ρ = TrJ[(IJ⊗ρJ)X] ,
+(14)
+∆(X)J
+ρ = (X)J
+ρ −IJ Tr
+h
+ρJ(X)J
+ρ
+i
+,
+(15)
+(X, Y)J
+ρ =
+1
+2 Tr
+h
+ρJ
+n
+∆(X)J
+ρ, ∆(Y)J
+ρ
+oi
+,
+(16)
+where ρJ = TrJ(ρ). For a bipartite system, AB, the LPOs (X)A
+ρ (on HA) and (X)B
+ρ (on HB)
+are the unique operators that, for a given X on HAB and for all states ρ, satisfy the identity
+Tr
+h
+ρA(X)A
+ρ
+i
+= Tr[(ρA⊗ρB)X] = Tr
+h
+ρB(X)B
+ρ
+i
+.
+(17)
+This confirms that they encapsulate all the information that A and B can infer about the
+global observable X by classically sharing their local states.
+Operator (X)A
+ρ can be viewed as the projection onto HA of the operator X weighted
+according to the local state ρB of subsystem B. However, it is a local observable for
+subsystem A, which depends on the overall state, ρ, and the overall observable, X. Its
+local mean value, Tr
+h
+ρA(X)A
+ρ
+i
+, differs from the mean value, Tr(ρX), for the overall system,
+AB, except when A and B are uncorrelated (ρ = ρA⊗ρB). It was dubbed ‘local perception’
+because, even if B performs a local tomography and sends the measured ρB to A via
+classical communication, the most that A can measure locally about the overall observable
+X is (X)A
+ρ .
+The overall energy and entropy of the composite system are locally perceived within
+subsystem J through the operators (H)J
+ρ and (S)J
+ρ defined on HJ by Equation (14), respec-
+tively, with X = H, the overall Hamiltonian, and X = S(ρ), the overall (non-negative)
+entropy operator defined by
+S(ρ) = −kBBln(ρ) ,
+(18)
+where we define the discontinuous log function
+Bln(x) =
+
+
+
+ln(x), for 0 < x ≤1,
+0, otherwise.
+(19)
+Note that the ‘locally perceived overall entropy’ operator
+(S)J
+ρ = −kB TrJ[(IJ⊗ρJ)Bln(ρ)] ,
+(20)
+is different from the ‘local entropy’ operator
+S(ρJ) = −kBBln(ρJ) .
+(21)
+Its local mean value, Tr
+h
+ρJ(S)J
+ρ
+i
+= −kB Tr
+h
+(ρJ⊗ρJ)Bln(ρ)
+i
+, is different from the local
+entropy Tr
+h
+ρJS(ρJ)
+i
+= −kB Tr
+h
+ρJ ln
+
+ρJ
+i
+. Only when ρ = ρJ⊗ρJ are they related via
+Tr
+h
+ρJ(S)J
+ρ
+i
+= Tr
+h
+ρJS(ρJ)
+i
++ Tr
+h
+ρJS(ρJ)
+i
+= −kB Tr[ρ ln(ρ)].
+(22)
+
+
+Published primary source, printed page 12:
+Entropy 2025, 27, 1018
+12 of 29
+8. The Local Structure of Dissipation in Composite-System SEA Dynamics
+We are now ready to introduce the final but essential ingredient of a general composite-
+system nonlinear QM or master equation. This involves the system’s structure-dependent
+expressions, which determine how each subsystem contributes separately to the dissipative
+term in the equation of motion for the overall state, ρ. As discussed above—and recognized
+in early SEA literature [17,22,24]—the composite-system nonlinear evolution must explicitly
+reflect the internal structure of the system. This requires declaring which subsystems are to
+be protected from nonphysical effects such as signaling, the exchange of energy, or the build-
+up of correlations between non-interacting subsystems. Using the notation introduced
+earlier, the structure proposed in [17,24] for the dissipative term, which supplements the
+usual Hamiltonian term, is given by
+dρ
+dt = −i
+¯h[H, ρ] −
+M
+∑
+J=1
+{DJ
+ρ, ρJ} ⊗ρJ ,
+(39)
+where the ‘local dissipation operators’ DJ
+ρ (on HJ) may be nonlinear functions of the
+local observables of J, the reduced state ρJ, and the local perception operators of overall
+observables. For the dissipative term to preserve Tr(ρ), operators {DJ
+ρ, ρJ} must be traceless.
+To preserve Tr(ρH) [and possibly other conserved properties or charges, Tr(ρCk)], operators
+{DJ
+ρ, ρJ}(H)J
+ρ [and {DJ
+ρ, ρJ}(Ck)J
+ρ] must also be traceless. The rate of change of the overall
+system entropy s(ρ) = −kB Tr[ρ ln(ρ)] is
+ds(ρ)
+dt
+= −
+M
+∑
+J=1
+Tr
+h
+{DJ
+ρ, ρJ}(S)J
+ρ
+i
+.
+(40)
+The local nonlinear evolution of subsystem J is obtained via partial tracing over HJ, i.e.,
+in general,
+dρJ
+dt
+= −i
+¯h[HJ, ρJ] −i
+¯h TrJ([V, ρ]) −{DJ
+ρ, ρJ} ,
+(41)
+where we recall that the second term in the RHS can be expressed, for weak interactions
+and under well-known assumptions, in Kossakowski–Lindblad form.
+Before introducing the SEA assumption, as promised after Equation (2), we note that,
+for all possible choices of DJ
+ρ, Equation (39) defines a broad class of no-signaling nonlinear
+evolution equations. These form a broader class of nonlinear laws that are not restricted by
+the sufficient but not necessary condition that dρJ/dt be a function of ρJ only.
+Finally, one way to introduce the SEA assumption in the spirit of the fourth law of
+thermodynamics [65–68], i.e., to implement the maximum entropy production principle
+(MEPP) in the present context [69], is to employ a variational principle.
+9. General Composite System Version of the SEA Variational Principle
+For the purpose of this section, we adopt the formalism developed for this context
+in [17,20,24]. To easily impose the constraints of preservation of non-negativity and self-
+adjointness of ρ during its time evolution, we define the generalized square root of ρJ,
+γJ(t) =
+q
+ρJ(t) U (U any unitary operator), so that
+ρJ = γJγ†
+J .
+(42)
+
+
+Published primary source, printed page 15:
+Entropy 2025, 27, 1018
+15 of 29
+so that the dependence on γJ is only through the product γJγ†
+J , i.e., the local state
+operator ρJ.
+The metric operator L−1
+J /kBτJ plays a role analogous to the symmetric thermal conduc-
+tivity tensor ˆk in heat transfer theory. In that context, ˆk defines the general near-equilibrium
+linear relationship, |q′′) = −ˆk |∇T), between the heat flux vector q′′ and the conjugated
+‘degree of disequilibrium’ vector, i.e., the temperature gradient ∇T. Here, Equation (57)
+expresses a more general linear relationship between the local evolution operator ˙γd
+J and
+the non-equilibrium Massieu operator, (S)J
+ρ −∑k ϑJ
+k(Ck)J
+ρ. This relation is more general, as
+it holds not only near equilibrium but also anywhere far from equilibrium. In the present
+quantum modeling context, it represents the nonlinear SEA extension into the far-non-
+equilibrium domain of Onsager’s linear near-equilibrium theory, with reciprocity naturally
+embedded through the symmetry of any metric. For example, if LJ commutes with the
+local Hamiltonian HJ, its eigenvalues can assign different relaxation times to the local
+energy levels, capturing their uneven contributions to the rate of local energy redistribution
+described by the SEA dissipator DJ
+ρ.
+Like in heat transfer, the conductivity tensor for an isotropic material is ˆk = k ˆI; here,
+an analogous simplification is obtained when LJ = IJ, the identity operator on HJ. This
+corresponds to assuming a uniform Fisher–Rao metric.
+Another noteworthy observation is that operators Ck, to be global constants of
+the motion (or ’charges’), must commute with the global Hamiltonian operator H, but
+they need not commute with each other. Therefore, the SEA formalism may also find
+application in the framework of quantum thermodynamic resource theories that con-
+template ’non-commuting charges’ and ’non-Abelian thermal states’, as discussed in
+Yunger Halpern et al. [11] and Murthy et al. [71].
+10. Simplest Composite-System SEA Equation of Motion
+For simplicity, we proceed by assuming the following: (1) a uniform Fisher–Rao
+metric, with ˆGJ = ˆIJ, so that ˆGJ|X) = |X) and LJ = IJ; and (2) only two global con-
+served properties, c1(ρ) = Tr(ρI) (the normalization condition) and c2(ρ) = Tr(ρH) (mean
+energy conservation).
+The first assumption allows the obtaining of
+DJ
+ρ = −2
+kBτJ
+h
+(S)J
+ρ −∑kϑJ
+k(Ck)J
+ρ
+i
+.
+(59)
+and the system of Equation (58) reduces to
+∑
+k
+ϑJ
+k Tr
+h
+ρJ
+n
+(Cℓ)J
+ρ, (Ck)J
+ρ
+oi
+= Tr
+h
+ρJ
+n
+(S)J
+ρ, (Cℓ)J
+ρ
+oi
+.
+(60)
+The second assumption, C1 = I and C2 = H, together with definitions (15) and (16),
+allows the writing of the SEA dissipators in the compact forms
+−{DJ
+ρ, ρJ} =
+2
+kBτJ
+{∆(M)J
+ρ, ρJ}
+=
+2
+kBτJ
+
+{∆(S)J
+ρ, ρJ}
+{∆(H)J
+ρ, ρJ}
+(H, S)J
+ρ
+(H, H)J
+ρ
+
+(H, H)J
+ρ
+,
+(61)
+
+
+Published primary source, printed page 16:
+Entropy 2025, 27, 1018
+16 of 29
+and the local non-equilibrium inverse temperatures conjugated with the locally perceived
+energy as
+ϑJ
+2 = (H, S)J
+ρ
+(H, H)J
+ρ
+.
+(62)
+As a result, the local evolution of each subsystem, J, is along the direction of steepest
+ascent of the locally perceived overall composite-system entropy, compatible with the
+conservation of the locally perceived overall composite-system energy and the conditions
+of unit-trace and non-negativity of the overall density operator, ρ. The rate of entropy
+production may be expressed as
+ds(ρ)
+dt
+=
+M
+∑
+J=1
+4
+kBτJ
+(M, M)J
+ρ
+=
+M
+∑
+J=1
+4
+kBτJ
+
+(S, S)J
+ρ
+(H, S)J
+ρ
+(H, S)J
+ρ
+(H, H)J
+ρ
+
+(H, H)J
+ρ
+,
+(63)
+showing clearly that it is non-negative since the numerators in the summation are Gram
+determinants. When the J-th term in the sum vanishes, we say that the local state ρJ is
+‘non-dissipative’. If all local states are non-dissipative, then so is the overall state ρ. A
+non-dissipative ρ represents an equilibrium state if it commutes with H; otherwise, it
+belongs to a unitary limit cycle of the dynamics.
+For ρ to be non-dissipative, there must exist βJs, such that, for every J,
+ρJ∆(Bln(ρ))J
+ρ = −βJρJ∆(H)J
+ρ ,
+(64)
+or, equivalently,
+ρJ∆
+h
+Bln(ρJ)+βJHJ+βJ(VJJ)J
+ρ+(µJJ)J
+ρ
+i
+= 0 ,
+(65)
+where VJJ is the Hamiltonian interaction operator defined in Equation (26), and µJJ the
+mutual information operator defined in Equation (27). Clearly, for VJJ = 0 and µJJ = 0,
+Equation (65) is satisfied by the Gibbs states
+ρJ = exp
+
+−βJHJ
+
+/ Tr
+h
+exp
+
+−βJHJ
+i
+.
+(66)
+Section 11.3 provides a numerical illustration of local time evolutions that converge to
+limit cycles obeying Equation (65). These examples also illustrate another noteworthy possi-
+bility. Specifically, without violating the no-signaling condition nor the second-law principle
+of global entropy non-decrease—which is always guaranteed by virtue of Equation (63) and
+the properties of Gram determinants—it is possible that the local entropy of a subsystem be
+decreasing during part of the time evolution. Indeed, for correlated states, the non-decrease
+in local entropy is not a second-law requirement. We hope that the observation that a local
+entropy decrease may be thermodynamically consistent in the presence of strong entan-
+glement will stimulate the design of experimental verifications, as well as foundational
+discussions in the framework of quantum thermodynamic resource theories, even beyond
+and outside the SEA framework.
+Regarding no-signaling, we note the following:
+1.
+If subsystem J is non-interacting, VJJ = 0, then
+∆(H)J
+ρ = HJ −IJ Tr
+
+ρJHJ
+
+= ∆HJ
+(67)

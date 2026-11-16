@@ -1,0 +1,30 @@
+{
+  "source_sha256": "5ac0dd44c6dc2031576982eb7be2284214ec5a9bb43279a2a9ea985e1fcdd1fb",
+  "scientific_base_commit": "055eb8265b816dcf5a1e995cf8abf74a5e4e7fcc",
+  "status": "INPUTS_FROZEN_NOT_REVIEW_COMPLETE",
+  "files": {
+    "manuscript/main.tex": "5ac0dd44c6dc2031576982eb7be2284214ec5a9bb43279a2a9ea985e1fcdd1fb",
+    "README.md": "fff508a7946e86e32df76ce6fb612a57f08a46098c644d59a5c59434f5f2d084",
+    "CLAIMS.md": "c0db972108a93ffeb1c61da4bc648156decd843a33f7b176503ee821cad71bf0",
+    "SOURCES.md": "5c2779d290e69cebcc16219d22235515223d0e8cd0e6bba64ff5ab271724f69f",
+    ".zenodo.json": "c2e4b574ca1265a72b3d8ffd45d17ca8125ad876105ecb8beef0fd7b3b15529b",
+    "CITATION.cff": "0e095af7bcfb7d6cd36781623e291273e1a59509f9212591e07939a97d894a01"
+  },
+  "assignments": {
+    "claude": {
+      "lens": "Proof-adversarial. Recompute all source substitutions, covariance denominator, factor/sign, one-sided tangent condition, repair lower bounds for arbitrary Hermitian corrections and actual curve sharpness, connected-correlation identity, exact full-rank formula and limit. Search for a counterexample to every retained quantified claim. Check source-domain interpretation against supplied publisher excerpts; distinguish any uncertainty from an actual error.",
+      "packet": "reviews/three-lens-2026-11-16/initial-claude-packet.txt",
+      "sha256": "fe2d3c484262b320a60caa1614d5ecaa9460e88a43ad94d84e872a25dcd79c69"
+    },
+    "grok": {
+      "lens": "Complexity/resource and quantitative-scope. Audit all quantifiers and constants, full-rank versus pointwise kernel interpretation, instantaneous versus global repair, arbitrary unequal times, constraints, exact diagnostic limits and the absence of computational/physical claims. Independently recompute the most important formulas and identify missing obligations or exaggerated scope.",
+      "packet": "reviews/three-lens-2026-11-16/initial-grok-packet.txt",
+      "sha256": "e29380fca4c9baf8e9a25787c9e9ebbda612bb3af983d4bc00c138749b8bf757"
+    },
+    "agy": {
+      "lens": "Non-claims/attribution. Audit abstract, main claims, README and metadata against the actual proofs and supplied primary excerpts. Is the specific published-equation criticism fair and sufficiently qualified? Check boundary/domain, related literature and novelty limits, unitary correlation evolution, public draft/review/formal labels. Do not treat the packet as independent literature clearance.",
+      "packet": "reviews/three-lens-2026-11-16/initial-agy-packet.txt",
+      "sha256": "37eb929d1d0e7085763db186f915739a1cb537381cccf8192aebfc4a0571f2bf"
+    }
+  }
+}

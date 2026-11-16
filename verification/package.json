@@ -1,17 +1,17 @@
 {
-  "created_utc": "2026-11-16T20:45:45.959146+00:00",
+  "created_utc": "2026-11-16T21:32:14.480963+00:00",
   "scope": "Package inventory and verification, not publication or formal acceptance",
   "verification": {
     "status": "pass",
-    "source_sha256": "5ac0dd44c6dc2031576982eb7be2284214ec5a9bb43279a2a9ea985e1fcdd1fb",
-    "pdf_sha256": "646253b7f920c58e264baa1d9432b44990cfcad35c3945b4185d9b4203513e43",
+    "source_sha256": "8176c99fff1fdb723493452a36eef09f25144987dddebbc1f3b81978572c6ee5",
+    "pdf_sha256": "bec715d8e8c1ac8778c1feb8d19172e72aafd2f4ffa57a46be693ab5868b2c50",
     "pages": 5,
     "preserved_evidence_files_checked": 9,
     "diagnostic_assertions": 122,
     "formal_certification": false,
     "scope": "package, hashes, receipts and links; not an additional mathematical experiment"
   },
-  "review": "same-agent internal review only",
+  "review": "COMPLETE_WITH_DISPOSITIONS",
   "visual_pages_inspected": [
     1,
     2,
@@ -23,8 +23,8 @@
   "files": [
     {
       "path": ".gitattributes",
-      "bytes": 83,
-      "sha256": "97c7e4fec2ee0278f1db2c1070de9efbb02756f17c642b2f632390471745632c"
+      "bytes": 153,
+      "sha256": "7cafb251bf5b339ff2f11fe38287746a2530ce8602e97b4c20d31d35b55a37c5"
     },
     {
       "path": ".gitignore",
@@ -38,8 +38,8 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 971,
-      "sha256": "6619404004bf5f193a06ef4c3ac9fc4b81cf0e34e48901539d98db8d95807fd0"
+      "bytes": 1422,
+      "sha256": "3deb83612dc5580ee120d182fde62e6323dfba2084535cb5585272af46b0b358"
     },
     {
       "path": "CITATION.cff",
@@ -48,8 +48,8 @@
     },
     {
       "path": "CLAIMS.md",
-      "bytes": 4205,
-      "sha256": "c0db972108a93ffeb1c61da4bc648156decd843a33f7b176503ee821cad71bf0"
+      "bytes": 4333,
+      "sha256": "305c46ff2f770f8a56f3c527b49c15e85cc9f496e226de52e42d0a57fb96f2a0"
     },
     {
       "path": "LICENSE",
@@ -58,13 +58,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 4114,
-      "sha256": "031ec8c539f42a4bb1ebc8b6e328507ffc74d1b3caa3d7601879e243f9358599"
+      "bytes": 4608,
+      "sha256": "5a01e8039404499f48607cd8133fe7fd30e6087715a30ef82665749074fe02fd"
     },
     {
       "path": "SOURCES.md",
-      "bytes": 5914,
-      "sha256": "5c2779d290e69cebcc16219d22235515223d0e8cd0e6bba64ff5ab271724f69f"
+      "bytes": 6036,
+      "sha256": "e53971665544eef4c4c83289a7b2f7846978937798412773d016ceaefc1507dd"
     },
     {
       "path": "evidence/provenance.json",
@@ -118,18 +118,173 @@
     },
     {
       "path": "manuscript/main.pdf",
-      "bytes": 70295,
-      "sha256": "646253b7f920c58e264baa1d9432b44990cfcad35c3945b4185d9b4203513e43"
+      "bytes": 70760,
+      "sha256": "bec715d8e8c1ac8778c1feb8d19172e72aafd2f4ffa57a46be693ab5868b2c50"
     },
     {
       "path": "manuscript/main.tex",
-      "bytes": 15093,
-      "sha256": "5ac0dd44c6dc2031576982eb7be2284214ec5a9bb43279a2a9ea985e1fcdd1fb"
+      "bytes": 15503,
+      "sha256": "8176c99fff1fdb723493452a36eef09f25144987dddebbc1f3b81978572c6ee5"
     },
     {
       "path": "reviews/INTERNAL-REVIEW.md",
       "bytes": 4250,
       "sha256": "e6f4cd9ade64045acc24a0d48090183bc2e5bcea049e3f6ea59f8ac0cd022e14"
+    },
+    {
+      "path": "reviews/REVIEW-SUMMARY.json",
+      "bytes": 4460,
+      "sha256": "0b13c2d08867965afeeadd84eea96b37ad735f75939cdf2dceabf398ebf6fd5d"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/DISPOSITION.md",
+      "bytes": 4440,
+      "sha256": "dc5fa7ea190f7b2924bc2600aa1d743965f6107da50533d66e8b099ff0507d44"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/agy-compact.md",
+      "bytes": 5821,
+      "sha256": "c938946b9ca9c3607332f60e694bf40cc6ed50141f11287037be01261f7b072b"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/agy-initial.md",
+      "bytes": 13768,
+      "sha256": "4c5fd6104d6691d0614397f5fd1b01ed38fa37909cc476e9b80df2092265b0fe"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/claude-closeout.md",
+      "bytes": 5006,
+      "sha256": "99783edb7daa43d7fcf6e1d313ebb037a5616b72450855135af642c8fc737755"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/claude-final.md",
+      "bytes": 10157,
+      "sha256": "3d692af5508cbf598c2ed9d2cdff87bf5339f7f6fed3b729226c93e236750d9e"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/claude-initial.md",
+      "bytes": 10951,
+      "sha256": "5e6106fd273b9946da5cd7fc022a5d620e2a533aa2d62f63b5893c8eb008c231"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/closeout-agy-packet.txt",
+      "bytes": 53628,
+      "sha256": "5fa5175f39dcce0377344909cc638406bb3720dbb94af6828f630fad3599b4ef"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/closeout-claude-packet.txt",
+      "bytes": 53531,
+      "sha256": "94faaed58bcd09f8a78dc0729d0d63c680c73a840ea84e7240c0da0f7204abb6"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/closeout-grok-packet.txt",
+      "bytes": 53499,
+      "sha256": "70406ff4186f5528424039988a83093102aa90a7a0c06385f83b0e94ce05a5a4"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/closeout-inputs.json",
+      "bytes": 1268,
+      "sha256": "8cf74e16f798c8d57f1847b7f6670e901d4d2c27e50036924249071aae07a210"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/closeout-invocations.json",
+      "bytes": 2342,
+      "sha256": "0b284ecb95a5133542ff76de67373241d0f229f8d3a99bced807eade99b493cb"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/compact-agy-packet.txt",
+      "bytes": 26990,
+      "sha256": "0bdf131222c1cb1429596ace2d6aee0cc459d0b30156db73c82c36b93b197f02"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/compact-inputs.json",
+      "bytes": 372,
+      "sha256": "01b9f401e6a42739b500010b35219af47622c45bbe221c77cf989ef0a92f3af0"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/compact-invocations.json",
+      "bytes": 920,
+      "sha256": "cfcb47ab9fba87ebf7ee61d37e54398fd9e788373c4050e1808b3f3d4d5ec392"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/final-agy-packet.txt",
+      "bytes": 52942,
+      "sha256": "af34150836a3c78f921c00a1e98f43725980921452db1b501c39813e2d15a13b"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/final-claude-packet.txt",
+      "bytes": 52845,
+      "sha256": "820c45a26d48bd24e2a5f7b52d03866187267335233058542e0af7082ec93818"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/final-grok-packet.txt",
+      "bytes": 52813,
+      "sha256": "9eb61e333c8c6fe6053b83d6973d8fc4eedf399507ab01c3264791453cf65bb3"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/final-inputs.json",
+      "bytes": 2227,
+      "sha256": "2e99c30f4bd6329c9c758c4d020c5ab34d37eaf3578472d6cc509f2a5d1b00ca"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/final-invocations.json",
+      "bytes": 2334,
+      "sha256": "c8f12688a807ac9f5d50c24a8ad606cb11bfdcaddd29b6875128d239150a6930"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/grok-closeout.md",
+      "bytes": 4331,
+      "sha256": "e5616e75644eecc2afee0846d0eb077078760abbcb40b7c8fac505c13fc37dd1"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/grok-final.md",
+      "bytes": 6593,
+      "sha256": "1e8563884be5cecac21323ee8726004aec03038bd2d928d3ea9670a03b81e536"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/grok-initial.md",
+      "bytes": 9292,
+      "sha256": "3565a6a075a037bf0957e8cb65bb60d02bee5d4cf5cce477c7252aefb21598df"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/initial-agy-packet.txt",
+      "bytes": 43524,
+      "sha256": "37eb929d1d0e7085763db186f915739a1cb537381cccf8192aebfc4a0571f2bf"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/initial-claude-packet.txt",
+      "bytes": 43585,
+      "sha256": "fe2d3c484262b320a60caa1614d5ecaa9460e88a43ad94d84e872a25dcd79c69"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/initial-grok-packet.txt",
+      "bytes": 43513,
+      "sha256": "e29380fca4c9baf8e9a25787c9e9ebbda612bb3af983d4bc00c138749b8bf757"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/initial-invocations.json",
+      "bytes": 2702,
+      "sha256": "6d6d4e5ecd03e4e79c73815c4231a1fb0fe67916f15b56d1a6aa39541d1ad023"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/inline-agy-packet.txt",
+      "bytes": 53628,
+      "sha256": "5fa5175f39dcce0377344909cc638406bb3720dbb94af6828f630fad3599b4ef"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/inline-inputs.json",
+      "bytes": 411,
+      "sha256": "fb23f1a2f8580de5e573c0389efc8e2ef451ddeea6bece5b8ea31c923d9a1524"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/inline-invocations.json",
+      "bytes": 558,
+      "sha256": "f832a5f950dadfbb7fae6d8f70f8d68a15b90bccd7e7b4c1f95eb762e5ef94d6"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/inputs.json",
+      "bytes": 2633,
+      "sha256": "8be425d1d46547a882e6ebcf54461076d8b14ea3ca184b5ee97b9e3efb3bda28"
     },
     {
       "path": "sources/README.md",
@@ -153,8 +308,8 @@
     },
     {
       "path": "tools/freeze_package.py",
-      "bytes": 1213,
-      "sha256": "178de70b33239bcfc726e3457073ca9216fa5cf8c9f224135ecc24550ed30b70"
+      "bytes": 1302,
+      "sha256": "d7dcd78b47b4c3ba63e1fcec31efb0110594f562180b833e1a1033fc0869f4f1"
     },
     {
       "path": "tools/import_evidence.py",
@@ -173,13 +328,18 @@
     },
     {
       "path": "tools/verify_package.py",
-      "bytes": 2662,
-      "sha256": "bb54d528d1d1de806d8d1672c424894fa4a95592e467c53af2208232c37007a6"
+      "bytes": 2832,
+      "sha256": "2bf54a3bd3e04ec83f31903430a9c43752f37d9dc440eea989db2c51504d691f"
+    },
+    {
+      "path": "tools/verify_reviews.py",
+      "bytes": 1279,
+      "sha256": "b4f062788b1d148c1f52ea492c6c9516bb64013e51df28759104c982d821ecaa"
     },
     {
       "path": "verification/build.json",
       "bytes": 601,
-      "sha256": "148a279fd15c3530ad4b59813cb0db3c1a37064025b4dfe6a2f0c7d9cdc842c2"
+      "sha256": "0e3cf4b4c032c3a3a0a6e66fc922367947a7f2fbfceefd76176dc10459eba79a"
     },
     {
       "path": "verification/exact-check.json",
@@ -190,6 +350,11 @@
       "path": "verification/exact-process.json",
       "bytes": 926,
       "sha256": "1fe7197e7753c5b9cc330e34474acf5d0a7e07fc62d9ca9f5cc2f0eab7e2a18b"
+    },
+    {
+      "path": "verification/public-zenodo-status.json",
+      "bytes": 556,
+      "sha256": "98d2e39b487ac67acd550ae3712a71aa346a2cd7247291c09f6c8b23a8b26bd8"
     },
     {
       "path": "verification/source-downloads.json",

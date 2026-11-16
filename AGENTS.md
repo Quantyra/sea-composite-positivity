@@ -5,3 +5,5 @@ Read README.md, CLAIMS.md, SOURCES.md and formal/CERTIFICATION-PLAN.md before ma
 Preserve evidence/s279 bytes, historical missing-exit-code caveat and current receipts. Record new verification separately. Keep the specified boundary convention, joint tensor products, positive-time assumptions and full-rank limitation exact. No independent review or formal certification is currently claimed.
 
 No release/DOI/submission, external contact or Lean job is authorized by manuscript preparation. Follow current PaperMill routing/admission/review rules before formal work; CPU06/webserver is retired from compute. Do not alter existing jobs or parked routes. Commit focused changes, preserving unrelated work.
+
+2026-11-16 superseding authority: Dan explicitly authorized PUBLIC repository visibility so he can enable Zenodo, and requested separate three-lens review before a completed handoff. Visibility is verified public; no release/DOI authority is inferred. S290 coordinates proof-adversarial, complexity/resource and non-claims/attribution provider-native reviews and dispositions. P012's existing registration is not evidence those reviews are complete.

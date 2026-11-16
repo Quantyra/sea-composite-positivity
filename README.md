@@ -1,5 +1,7 @@
 # Boundary positivity in composite steepest-entropy-ascent dynamics
 
+Published preprint: **[DOI 10.5281/zenodo.24293863](https://doi.org/10.5281/zenodo.24293863)**. [GitHub release](https://github.com/Quantyra/sea-composite-positivity/releases/tag/v1.0.0) · [Archive verification](verification/publication-v1.0.0.json).
+
 Preprint version 1.0.0, 2026-11-16, by Daniel Fredriksen, Quantyra Inc. Separate Claude, Grok and AGY AI reviews are complete on the corrected source; [reports and dispositions](reviews/three-lens-2026-11-16/DISPOSITION.md) retain their exact scope and failed attempts. Human peer review and Lean certification are not claimed.
 
 The paper gives a rank-three, two-qubit counterexample to positivity of the pointwise composite equation in Ray and Beretta, *Entropy* 27, 1018 (2025), under its stated kernel-logarithm convention, uniform metric and normalization/mean-energy constraints. For arbitrary finite positive local relaxation times, the initially zero joint population has derivative

@@ -1,0 +1,39 @@
+{
+  "verified_utc": "2026-11-16T22:22:44.310039+00:00",
+  "status": "PUBLISHED_PREPRINT_ARCHIVE_VERIFIED",
+  "version": "1.0.0",
+  "release_commit": "73398f140663e9760b614e7bb553e3c876ddb6f6",
+  "release_tag": "v1.0.0",
+  "release_url": "https://github.com/Quantyra/sea-composite-positivity/releases/tag/v1.0.0",
+  "published_at": "2026-11-16T22:20:16Z",
+  "zenodo_record_id": 24293863,
+  "doi": "10.5281/zenodo.24293863",
+  "concept_doi": "10.5281/zenodo.24293862",
+  "zenodo_url": "https://zenodo.org/records/24293863",
+  "doi_resolver_check": {
+    "status": 200,
+    "final_url": "https://zenodo.org/records/24293863"
+  },
+  "zenodo_title": "A boundary positivity obstruction for a composite steepest-entropy-ascent equation",
+  "zenodo_resource_type": {
+    "title": "Preprint",
+    "type": "publication",
+    "subtype": "preprint"
+  },
+  "zenodo_archive_file": "Quantyra/sea-composite-positivity-v1.0.0.zip",
+  "zenodo_archive_bytes": 386294,
+  "zenodo_archive_md5": "0e95ff23c13c1da744906e8686f4db7b",
+  "zenodo_archive_sha256": "c1739833225029f6d833deb04997ce1c9b0d18201722c40867fa85231611d93b",
+  "archive_manifest_files_verified": 70,
+  "manuscript_sha256": "8176c99fff1fdb723493452a36eef09f25144987dddebbc1f3b81978572c6ee5",
+  "pdf_sha256": "bec715d8e8c1ac8778c1feb8d19172e72aafd2f4ffa57a46be693ab5868b2c50",
+  "github_pdf_asset_digest_verified": true,
+  "all_archived_manifest_bytes_verified": true,
+  "review_status": "COMPLETE_WITH_DISPOSITIONS",
+  "unresolved_essential_findings": [],
+  "human_peer_review": false,
+  "formal_certification": false,
+  "custody": "Existing PaperMill certification remains queued; no queue/job/owner changes.",
+  "delivery_notes": "A duplicate published webhook returned409 (already received); released was202. No redelivery needed.",
+  "scope": "Archival publication and byte verification, not new mathematics or a new review."
+}

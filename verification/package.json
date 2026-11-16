@@ -1,5 +1,5 @@
 {
-  "created_utc": "2026-11-16T22:19:22.416265+00:00",
+  "created_utc": "2026-11-16T22:23:19.790863+00:00",
   "scope": "Package inventory and verification, not publication or formal acceptance",
   "verification": {
     "status": "pass",
@@ -43,8 +43,8 @@
     },
     {
       "path": "CITATION.cff",
-      "bytes": 633,
-      "sha256": "84c45b0e345c737237acbc397d8b8288d453ca7f7b32af59d311c69e47b9c54e"
+      "bytes": 707,
+      "sha256": "21f97dc17d60825de411de5b2e1e80e7305ca5015f1e21744776c1edf08e6b8c"
     },
     {
       "path": "CLAIMS.md",
@@ -58,8 +58,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4519,
-      "sha256": "c67f888060c9a8b38fd4839084281311cb82c17d480c57646166fead59f10cec"
+      "bytes": 4772,
+      "sha256": "87fd03aecaad766ffb338bfb609c4c6d4cb36e7caacc11b8f2c300f07b6593c9"
     },
     {
       "path": "SOURCES.md",
@@ -355,6 +355,11 @@
       "path": "verification/public-zenodo-status.json",
       "bytes": 556,
       "sha256": "98d2e39b487ac67acd550ae3712a71aa346a2cd7247291c09f6c8b23a8b26bd8"
+    },
+    {
+      "path": "verification/publication-v1.0.0.json",
+      "bytes": 1876,
+      "sha256": "60e2bbb9f102eb7bf0a34b1bed7b7ddc74f59a712329c597d2c6cd77285e41db"
     },
     {
       "path": "verification/release-preparation-v1.0.0.json",
